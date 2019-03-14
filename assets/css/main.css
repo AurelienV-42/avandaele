@@ -3879,6 +3879,10 @@
 		background-image: url("images/overlay.png"), url("../../images/nature.jpg") !important;
 	}
 
+	.banner_it {
+		background-image: url("images/overlay.png"), url("../../images/it.jpg") !important;
+	}
+
 	#banner {
 		padding: 10em 0 8em 0;
 		background-color: #1E2832;

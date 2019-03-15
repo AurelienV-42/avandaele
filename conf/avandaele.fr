@@ -4,8 +4,9 @@ server {
         server_name localhost;
 	root /home/aurelien/Project/Perso/MyWebCV;
 	index index.html;
+	rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
 
-        location / {
-		 try_files $uri $uri/ =404;
+	location / {
+		 try_files $uri.html $uri/ $uri =404;
 	}
 }

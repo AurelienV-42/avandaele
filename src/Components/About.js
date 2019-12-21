@@ -2,15 +2,27 @@ import React from 'react';
 
 function About (props) {
 
-    const name = props.data.name;
-    const profilepic= "images/"+props.data.image;
-    const bio = props.data.bio;
-    const street = props.data.address.street;
-    const city = props.data.address.city;
-    const state = props.data.address.state;
-    const zip = props.data.address.zip;
-    const email = props.data.email;
-    const resumeDownload = props.data.resumedownload;
+    let name = '';
+    let profilepic = '';
+    let bio = '';
+    let street = '';
+    let city = '';
+    let state = '';
+    let zip = '';
+    let email = '';
+    let resumeDownload = '';
+
+    if (props.data) {
+        name = props.data.name;
+        profilepic = "images/" + props.data.image;
+        bio = props.data.bio;
+        street = props.data.address.street;
+        city = props.data.address.city;
+        state = props.data.address.state;
+        zip = props.data.address.zip;
+        email = props.data.email;
+        resumeDownload = props.data.resumedownload;
+    }
 
     return (
         <section id="about">

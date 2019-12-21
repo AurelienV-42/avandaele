@@ -1,39 +1,53 @@
-import React, {useEffect, useState} from 'react';
+import React, { Component } from 'react';
 import $ from 'jquery';
-import Header from "./Components/Header";
+import Header from './Components/Header';
 import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Testimonials from './Components/Testimonials';
 import Portfolio from './Components/Portfolio';
 
-function App () {
-    const [data, setData] = useState('');
+class App extends Component {
 
-    useEffect(() => {
-        $.ajax({
-            url:'/resumeData.json',
-            dataType:'json',
-            success: function(dataJSON){
-                setData(dataJSON);
-            },
-            error: function(xhr, status, err){
-                console.log(err);
-                alert(err);
-            }
-        });
-    }, []);
+  constructor(props){
+    super(props);
+    this.state = {
+      resumeData: {}
+    };
 
+  }
+
+  getResumeData(){
+    $.ajax({
+      url:'/resumeData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({resumeData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.getResumeData();
+  }
+
+  render() {
     return (
-        <div className="App">
-            { data !== '' && <Header data={data.main}/> }
-            { data !== '' && <About data={data.main}/> }
-            { data !== '' && <Resume data={data.resume}/> }
-            { data !== '' && <Portfolio data={data.portfolio}/> }
-            { data !== '' && <Testimonials data={data.testimonials}/> }
-            { data !== '' && <Footer data={data.main}/> }
-        </div>
+      <div className="App">
+        <Header data={this.state.resumeData.main}/>
+        <About data={this.state.resumeData.main}/>
+        <Resume data={this.state.resumeData.resume}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Testimonials data={this.state.resumeData.testimonials}/>
+        <Footer data={this.state.resumeData.main}/>
+      </div>
     );
+  }
 }
 
 export default App;

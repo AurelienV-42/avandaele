@@ -1,7 +1,8 @@
-# MyWebCV
+# Web CV
+![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true "ReactJS Resume Website Template")
 
-This is my web Project, designed by templated.co. The script is actually design for Ubuntu Server
+### <a href="https://avandaele.fr/">Go on my website</a>
 
-## Configuration
+## Description
 
-You just have to execute the script ```bin/install.sh```. It will install and configure nginx.
+This is a ReactJS project based on my personal resume.

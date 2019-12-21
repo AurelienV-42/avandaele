@@ -1,0 +1,121 @@
+{
+  "main": {
+    "name":"Aurélien Vandaële",
+    "occupation":"Freelance and student",
+    "description":"Motivated and passionate, I've been studying computer science for 3 years and I've been freelancing for 2",
+    "image":"profilepic.jpg",
+    "bio":"I'm a french student and freelancer. To stop talking about professional things, I'm sportive, one of my goal is to do an Iron Man (a kind of triathlon).",
+    "email": "aurelienvpro@gmail.com",
+    "address":{
+      "street":"16 rue des Martyrs",
+      "city":"Seclin",
+      "state":"France",
+      "zip": "59113"
+    },
+    "website": "https://avandaele.fr",
+    "resumedownload":"https://media.licdn.com/dms/document/C561FAQEENh_wxW0EQw/feedshare-document-pdf-analyzed/0?e=1577044800&v=beta&t=xRrWHph2ucK1hj9I8u787lxtfxEWVNKVLfFKcFfoBMs",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/aurelien-vandaele",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/AurelienV-42",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"malt",
+        "url":"https://www.malt.fr/profile/aurelienvandaele",
+        "className":"fa fa-laptop"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "education":[
+      {
+        "school":"Epitech",
+        "degree":"School of expertise in computer science",
+        "graduated":"2022",
+        "description":"I learned IT thanks to this school. It taught me how to learn. Learning C/C++, Python, React, DevOps (Git, Docker, Ansible)"
+      },
+      {
+        "school":"Genech Institute",
+        "degree":"French high school diploma equivalent in Science",
+        "graduated":"2017",
+        "description":"This school permitted me to study Mathematics and Physic Science, 2 hobbies for me"
+      }
+    ],
+    "work":[
+      {
+        "company":"Freelance",
+        "years":"2018 - Present",
+        "description":"Completion of various projects such as the automation of logo manufacturing (completion of SVG in Pick&Place format). Mostly made in Python. Discovery of telework."
+      },
+      {
+        "company":"ACS-AMI",
+        "title":"Second year internship - Fullstack developper",
+        "years":"July 2018... 6 months",
+        "description":"First real discovery of work as developper. Designer and developper of an application for decision-making purposes. Discovered web development (Back: Python/SQL, Front: ReactJS and Superset framework)"
+      }
+    ],
+    "skills":[
+      {
+        "name":"French",
+        "level":"100%"
+      },
+      {
+        "name":"English",
+        "level":"80%"
+      },
+      {
+        "name":"C/C++",
+        "level":"80%"
+      },
+      {
+        "name":"Python",
+        "level":"85%"
+      },
+      {
+        "name":"React",
+        "level":"75%"
+      },
+      {
+        "name":"MongoDB/MySQL",
+        "level":"65%"
+      },
+      {
+        "name":"Ansible",
+        "level":"90%"
+      },
+      {
+        "name":"Docker",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Canadian Wanderlust",
+        "category":"My Travel Blog for my post-university travels",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://github.com/AurelienV-42"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Pedagogical, educated, hard-working, Aurélien has many qualities for the realization of your projects.",
+        "user":"Thomas Meurice - Linkedin"
+      },
+      {
+        "text":"Highly motivated to succeed, he knows how to work in a group and get really involved in his projects.",
+        "user":"Victor Leblanc - Linkedin"
+      }
+    ]
+  }
+}

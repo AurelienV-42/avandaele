@@ -12,14 +12,14 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      language: 'en',
       resumeData: {}
     };
-
   }
 
-  getResumeData(){
+  getResumeData(language){
     $.ajax({
-      url:'/resumeData.json',
+      url: 'resumeData'+language+'.json',
       dataType:'json',
       cache: false,
       success: function(data){
@@ -32,16 +32,26 @@ class App extends Component {
     });
   }
 
+  changeLanguage = () => {
+    if (!this.state.language || this.state.language === 'en') {
+      this.getResumeData('fr');
+      this.setState({language: 'fr'});
+    } else {
+      this.getResumeData('en');
+      this.setState({language: 'en'});
+    }
+  };
+
   componentDidMount(){
-    this.getResumeData();
+    this.getResumeData(this.state.language);
   }
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main}/>
-        <About data={this.state.resumeData.main}/>
-        <Resume data={this.state.resumeData.resume}/>
+        <Header data={this.state.resumeData.main} language={this.state.language} changeLanguage={this.changeLanguage}/>
+        <About data={this.state.resumeData.main} language={this.state.language}/>
+        <Resume data={this.state.resumeData.resume} language={this.state.language}/>
         {/*<Portfolio data={this.state.resumeData.portfolio}/>*/}
         <Testimonials data={this.state.resumeData.testimonials}/>
         <Footer data={this.state.resumeData.main}/>

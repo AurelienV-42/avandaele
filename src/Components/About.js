@@ -11,6 +11,7 @@ function About (props) {
     let zip = '';
     let email = '';
     let resumeDownload = '';
+    let language = 'en';
 
     if (props.data) {
         name = props.data.name;
@@ -22,6 +23,7 @@ function About (props) {
         zip = props.data.address.zip;
         email = props.data.email;
         resumeDownload = props.data.resumedownload;
+        language = props.language;
     }
 
     return (
@@ -31,12 +33,14 @@ function About (props) {
                     <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
                 </div>
                 <div className="nine columns main-col">
-                    <h2>About Me</h2>
+                    {language === 'en' && <h2>About Me</h2>}
+                    {language === 'fr' && <h2>À propos de moi</h2>}
 
                     <p>{bio}</p>
                     <div className="row">
                         <div className="columns contact-details">
-                            <h2>Contact Details</h2>
+                            {language === 'en' && <h2>Contact Details</h2>}
+                            {language === 'fr' && <h2>Contacts</h2>}
                             <p className="address">
                                 <span>{name}</span><br />
                                 <span>{street}<br />
@@ -47,7 +51,8 @@ function About (props) {
                         </div>
                         <div className="columns download">
                             <p>
-                                <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>
+                                {language === 'en' && <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>}
+                                {language === 'fr' && <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Télécharger mon CV</a>}
                             </p>
                         </div>
                     </div>

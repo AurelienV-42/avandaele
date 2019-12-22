@@ -4,7 +4,8 @@ class Resume extends Component {
   render() {
 
     if(this.props.data){
-      var education = this.props.data.education.map(function(education){
+
+        var education = this.props.data.education.map(function(education){
         return <div key={education.school}><h3>{education.school}</h3>
         <p className="info">{education.degree} <span>&bull;</span><em className="date">{education.graduated}</em></p>
         <p>{education.description}</p></div>
@@ -25,7 +26,8 @@ class Resume extends Component {
       <section id="resume">
       <div className="row education">
          <div className="three columns header-col">
-            <h1><span>Education</span></h1>
+             {this.props.language === 'en' && <h1><span>Education</span></h1>}
+             {this.props.language === 'fr' && <h1><span>Éducation</span></h1>}
          </div>
          <div className="nine columns main-col">
             <div className="row item">
@@ -37,7 +39,8 @@ class Resume extends Component {
       </div>
       <div className="row work">
          <div className="three columns header-col">
-            <h1><span>Work</span></h1>
+             {this.props.language === 'en' && <h1><span>Work</span></h1>}
+             {this.props.language === 'fr' && <h1><span>Expériences</span></h1>}
          </div>
          <div className="nine columns main-col">
           {work}
@@ -45,7 +48,8 @@ class Resume extends Component {
     </div>
       <div className="row skill">
          <div className="three columns header-col">
-            <h1><span>Skills</span></h1>
+             {this.props.language === 'en' && <h1><span>Skills</span></h1>}
+             {this.props.language === 'fr' && <h1><span>Compétences</span></h1>}
          </div>
          <div className="nine columns main-col">
 				<div className="bars">

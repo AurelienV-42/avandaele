@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Testimonials (props) {
-    let testimonials = ''
+    let testimonials = '';
     if (props.data) {
         testimonials = props.data.testimonials.map(function (testimonials) {
             return <li key={testimonials.user}>

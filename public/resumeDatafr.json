@@ -1,0 +1,120 @@
+{
+  "main": {
+    "name":"Aurélien Vandaële",
+    "occupation":"Freelance et étudiant",
+    "description":"Motivé et passionné, j'étudie l'informatique depuis 3 ans et je suis freelance depuis 2",
+    "image":"profilepic.jpg",
+    "bio":"Je suis étudiant et freelance. Je suis sportif, l'un de mes buts dans la vie et de réaliser un Iron man (un type de triathlon)",
+    "email": "aurelienvpro@gmail.com",
+    "address":{
+      "street":"16 rue des Martyrs",
+      "city":"Seclin",
+      "state":"France",
+      "zip": "59113"
+    },
+    "website": "https://avandaele.fr",
+    "resumedownload":"https://media.licdn.com/dms/document/C561FAQEENh_wxW0EQw/feedshare-document-pdf-analyzed/0?e=1577044800&v=beta&t=xRrWHph2ucK1hj9I8u787lxtfxEWVNKVLfFKcFfoBMs",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/aurelien-vandaele",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/AurelienV-42",
+        "className":"fa fa-github"
+      },
+      {
+        "name":"malt",
+        "url":"https://www.malt.fr/profile/aurelienvandaele",
+        "className":"fa fa-laptop"
+      }
+    ]
+  },
+  "resume":{
+    "education":[
+      {
+        "school":"Epitech",
+        "degree":"L'école de l'innovation et de l'expertise informatique",
+        "graduated":"2022",
+        "description":"J'ai appris le développement à travers cette école. J'y ai appris les languages suivants: C/C++, Python, React, DevOps (Git, Docker, Ansible) et beaucoup de soft skills"
+      },
+      {
+        "school":"Institut de Genech",
+        "degree":"Bac Scientifique",
+        "graduated":"2017",
+        "description":"Cette école m'a permis d'étudier les mathématiques et la physique, 2 passions que j'ai depuis longtemps"
+      }
+    ],
+    "work":[
+      {
+        "company":"Freelance",
+        "years":"2018 - Présent",
+        "description":"Réalisation de différents projets comme l’automatisation de fabrication de logo. Réalisé majoritairement en Python. Découverte du télétravail."
+      },
+      {
+        "company":"ACS-AMI",
+        "title":"Second year internship - Fullstack developper",
+        "years":"July 2018... 6 months",
+        "description":"Première réelle découverte du monde du travail en tant que développeur.Concepteur et développeur d’une application à but décisionnel. Découverte du Web (Back : Python SQL, Front: ReactJS et Superset)"
+      }
+    ],
+    "skills":[
+      {
+        "name":"Français",
+        "level":"100%"
+      },
+      {
+        "name":"English",
+        "level":"80%"
+      },
+      {
+        "name":"C/C++",
+        "level":"80%"
+      },
+      {
+        "name":"Python",
+        "level":"85%"
+      },
+      {
+        "name":"React",
+        "level":"75%"
+      },
+      {
+        "name":"MongoDB/MySQL",
+        "level":"65%"
+      },
+      {
+        "name":"Ansible",
+        "level":"90%"
+      },
+      {
+        "name":"Docker",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Github Projects",
+        "category":"All my projects from Epitech on Github",
+        "image":"canadian-wanderlust.jpg",
+        "url":"https://github.com/AurelienV-42"
+      }
+    ]
+  },
+  "testimonials":{
+    "testimonials":[
+      {
+        "text":"Pédagogue, instruit, travailleur, Aurélien détient de nombreuses qualités pour la réalisation de vos projets.",
+        "user":"Thomas Meurice - Linkedin"
+      },
+      {
+        "text":"Très motivé pour réussir, il sait travailler en groupe et s'impliquer réellement dans ses projets.",
+        "user":"Victor Leblanc - Linkedin"
+      }
+    ]
+  }
+}

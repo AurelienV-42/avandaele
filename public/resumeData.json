@@ -1,10 +1,10 @@
 {
   "main": {
     "name":"Aurélien Vandaële",
-    "occupation":"Freelance and student",
+    "occupation":"Freelancer and student",
     "description":"Motivated and passionate, I've been studying computer science for 3 years and I've been freelancing for 2",
     "image":"profilepic.jpg",
-    "bio":"I'm a french student and freelancer. To stop talking about professional things, I'm sportive, one of my goal is to do an Iron Man (a kind of triathlon).",
+    "bio":"I'm a french student and freelancer. To stop talking about professional things, I'm sportive, one of my goals is to do an Iron Man (a kind of triathlon).",
     "email": "aurelienvpro@gmail.com",
     "address":{
       "street":"16 rue des Martyrs",
@@ -33,19 +33,18 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
     "education":[
       {
         "school":"Epitech",
         "degree":"School of expertise in computer science",
         "graduated":"2022",
-        "description":"I learned IT thanks to this school. It taught me how to learn. Learning C/C++, Python, React, DevOps (Git, Docker, Ansible)"
+        "description":"I learned IT thanks to this school. Learned C/C++, Python, React, DevOps (Git, Docker, Ansible)"
       },
       {
         "school":"Genech Institute",
         "degree":"French high school diploma equivalent in Science",
         "graduated":"2017",
-        "description":"This school permitted me to study Mathematics and Physic Science, 2 hobbies for me"
+        "description":"This school make me able to study Mathematics and Physics, 2 hobbies for me"
       }
     ],
     "work":[
@@ -58,7 +57,7 @@
         "company":"ACS-AMI",
         "title":"Second year internship - Fullstack developper",
         "years":"July 2018... 6 months",
-        "description":"First real discovery of work as developper. Designer and developper of an application for decision-making purposes. Discovered web development (Back: Python/SQL, Front: ReactJS and Superset framework)"
+        "description":"First profesionnal discovery working as developper. Designer and developper of an application for decision-making purposes. Discovered web development (Back: Python/SQL, Front: ReactJS and Superset framework)"
       }
     ],
     "skills":[
@@ -99,8 +98,8 @@
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
+        "title":"Github Projects",
+        "category":"All my projects from Epitech on Github",
         "image":"canadian-wanderlust.jpg",
         "url":"https://github.com/AurelienV-42"
       }

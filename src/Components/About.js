@@ -1,6 +1,7 @@
 import React from 'react';
 
 function About (props) {
+    const {data} = props;
 
     let name = '';
     let profilepic = '';
@@ -13,16 +14,17 @@ function About (props) {
     let resumeDownload = '';
     let language = 'en';
 
-    if (props.data) {
-        name = props.data.name;
-        profilepic = "images/" + props.data.image;
-        bio = props.data.bio;
-        street = props.data.address.street;
-        city = props.data.address.city;
-        state = props.data.address.state;
-        zip = props.data.address.zip;
-        email = props.data.email;
-        resumeDownload = props.data.resumedownload;
+    if (data) {
+        name = data.name;
+        profilepic = "images/" + data.image;
+        bio = data.bio;
+        const {address} = data;
+        street = address.street;
+        city = address.city;
+        state = address.state;
+        zip = address.zip;
+        email = data.email;
+        resumeDownload = data.resumedownload;
         language = props.language;
     }
 

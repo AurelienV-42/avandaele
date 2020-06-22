@@ -54,6 +54,12 @@
         "description":"Completion of various projects such as the automation of logo manufacturing (completion of SVG in Pick&Place format). Mostly made in Python. Discovery of telework."
       },
       {
+        "company":"BetM",
+        "title":"Third year internship - Frontend developper",
+        "years":"April 2020... 4 months",
+        "description": "I developed the mobile application in native React and helped with the design. I worked on the front, back and optimization (being an existing application).\nIt was very interesting and I learned a lot from this application. I discovered Firebase, a technology I am now comfortable with and enjoy."
+      },
+      {
         "company":"ACS-AMI",
         "title":"Second year internship - Fullstack developper",
         "years":"July 2018... 6 months",
@@ -62,36 +68,29 @@
     ],
     "skills":[
       {
-        "name":"French",
-        "level":"100%"
+        "name":"React Native",
+        "level":"95%"
       },
       {
-        "name":"English",
-        "level":"80%"
+        "name":"React JS",
+        "level":"85%"
+      },
+
+      {
+        "name":"Python",
+        "level":"85%"
       },
       {
         "name":"C/C++",
         "level":"80%"
       },
       {
-        "name":"Python",
-        "level":"85%"
-      },
-      {
-        "name":"React",
+        "name":"Firebase",
         "level":"75%"
       },
       {
-        "name":"MongoDB/MySQL",
-        "level":"65%"
-      },
-      {
-        "name":"Ansible",
-        "level":"90%"
-      },
-      {
-        "name":"Docker",
-        "level":"80%"
+        "name":"DevOps: Ansible/Docker",
+        "level":"75%"
       }
     ]
   },

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import $ from 'jquery';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -7,57 +7,47 @@ import Resume from './Components/Resume';
 import Testimonials from './Components/Testimonials';
 // import Portfolio from './Components/Portfolio';
 
-class App extends Component {
+const App = () => {
+  const [language, setLanguage] = useState('en');
+  const [resumeData, setResumeData] = useState({});
 
-  constructor(props){
-    super(props);
-    this.state = {
-      language: 'en',
-      resumeData: {}
-    };
-  }
+  useEffect(() => getResumeData(language));
 
-  getResumeData(language){
+  const getResumeData = language => {
     $.ajax({
       url: 'resumeData'+language+'.json',
       dataType:'json',
       cache: false,
       success: function(data){
-        this.setState({resumeData: data});
+        setResumeData(data);
       }.bind(this),
-      error: function(xhr, status, err){
+      error: (xhr, status, err) => {
         console.log(err);
         alert(err);
       }
     });
   }
 
-  changeLanguage = () => {
-    if (!this.state.language || this.state.language === 'en') {
-      this.getResumeData('fr');
-      this.setState({language: 'fr'});
+  const changeLanguage = () => {
+    if (!language || language === 'en') {
+      getResumeData('fr');
+      setLanguage('fr');
     } else {
-      this.getResumeData('en');
-      this.setState({language: 'en'});
+      getResumeData('en');
+      setLanguage('en');
     }
   };
 
-  componentDidMount(){
-    this.getResumeData(this.state.language);
-  }
-
-  render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} language={this.state.language} changeLanguage={this.changeLanguage}/>
-        <About data={this.state.resumeData.main} language={this.state.language}/>
-        <Resume data={this.state.resumeData.resume} language={this.state.language}/>
-        {/*<Portfolio data={this.state.resumeData.portfolio}/>*/}
-        <Testimonials data={this.state.resumeData.testimonials}/>
-        <Footer data={this.state.resumeData.main}/>
+        <Header data={resumeData.main} language={language} changeLanguage={changeLanguage}/>
+        <About data={resumeData.main} language={language}/>
+        <Resume data={resumeData.resume} language={language}/>
+        {/*<Portfolio data={resumeData.portfolio}/>*/}
+        <Testimonials data={resumeData.testimonials}/>
+        <Footer data={resumeData.main}/>
       </div>
     );
-  }
 }
 
 export default App;

@@ -1,9 +1,10 @@
 import React from 'react';
 
 function Testimonials (props) {
+    const {data} = props;
     let testimonials = '';
-    if (props.data) {
-        testimonials = props.data.testimonials.map(function (testimonials) {
+    if (data) {
+        testimonials = data.testimonials.map(function (testimonials) {
             return <li key={testimonials.user}>
                 <blockquote>
                     <p>{testimonials.text}</p>

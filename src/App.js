@@ -20,7 +20,7 @@ const App = () => {
       cache: false,
       success: function(data){
         setResumeData(data);
-      }.bind(this),
+      },
       error: (xhr, status, err) => {
         console.log(err);
         alert(err);

@@ -1,0 +1,91 @@
+{
+  "about": "About",
+  "resume": "Resume",
+  "testimonials": "Testimonials",
+  "titleHeader": "I'm Aurélien Vandaële.",
+  "bodyHeaderMark": "I'm a France based Freelancer and student. ",
+  "bodyHeader": "Motivated and passionate, I've been studying computer science for 3 years and I've been freelancing for 2.",
+  "downloadResume": "Download my resume",
+  "whoAmI": "Who Am I?",
+  "contacts": "Contacts",
+  "bio": "21 years old, athletic, creative and passionate about animals",
+  "education": "Education",
+  "work": "Work",
+  "skills": "Skills",
+  "test": {
+    "bonjour": "test"
+  },
+  "resumeTab": {
+    "education": [
+      {
+        "school": "Epitech",
+        "degree": "School of expertise in computer science",
+        "graduated": "2022",
+        "description": "I learned IT thanks to this school. Learned C/C++, Python, React, DevOps (Git, Docker, Ansible) and many soft skills"
+      },
+      {
+        "school": "Genech Institute",
+        "degree": "French high school diploma equivalent in Science",
+        "graduated": "2017",
+        "description": "This school make me able to study Mathematics and Physics, 2 hobbies for me"
+      }
+    ],
+    "work": [
+      {
+        "company": "Freelance",
+        "years": "2018 - Present",
+        "description": "Completion of various projects such as the automation of logo manufacturing (completion of SVG in Pick&Place format). Mostly made in Python. Discovery of telework."
+      },
+      {
+        "company": "BetM",
+        "title": "Third year internship - Frontend developper",
+        "years": "April 2020... 4 months",
+        "description": "I developed the mobile application in native React and helped with the design. I worked on the front, back and optimization (being an existing application).\nIt was very interesting and I learned a lot from this application. I discovered Firebase, a technology I am now comfortable with and enjoy."
+      },
+      {
+        "company": "ACS-AMI",
+        "title": "Second year internship - Fullstack developper",
+        "years": "July 2018... 6 months",
+        "description": "First profesionnal discovery working as developper. Designer and developper of an application for decision-making purposes. Discovered web development (Back: Python/SQL, Front: ReactJS and Superset framework)"
+      }
+    ],
+    "skills": [
+      {
+        "name": "React Native",
+        "level": "95%"
+      },
+      {
+        "name": "Firebase",
+        "level": "90%"
+      },
+      {
+        "name": "React JS",
+        "level": "85%"
+      },
+      {
+        "name": "Python",
+        "level": "85%"
+      },
+      {
+        "name": "C/C++",
+        "level": "80%"
+      },
+      {
+        "name": "DevOps: Ansible/Docker",
+        "level": "75%"
+      }
+    ]
+  },
+  "testimonialsTab": [
+    {
+      "text": "Pedagogical, educated, hard-working, Aurélien has many qualities for the realization of your projects.",
+      "user": "Thomas Meurice - Linkedin"
+    },
+    {
+      "text": "Highly motivated to succeed, he knows how to work in a group and get really involved in his projects.",
+      "user": "Victor Leblanc - Linkedin"
+    }
+  ],
+  "clientTestimonials": "Client testimonials",
+  "designBy": "Designed by Aurélien Vandaële based on a template from Styleshout.com"
+}

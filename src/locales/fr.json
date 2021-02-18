@@ -1,0 +1,91 @@
+{
+  "about": "À propos",
+  "resume": "Parcours",
+  "testimonials": "Témoignages",
+  "titleHeader": "Je suis Aurélien Vandaële.",
+  "bodyHeaderMark": "Freelance et étudiant ",
+  "bodyHeader": "basé en France. J'étudie à Epitech en 4ème année et je réalise des contrats en freelance depuis 2 ans.",
+  "downloadResume": "Télécharger mon CV",
+  "whoAmI": "Qui suis-je ?",
+  "contacts": "Contacts",
+  "bio": "21 ans, sportif, créatif et passionné d’animaux",
+  "education": "Éducation",
+  "work": "Expériences",
+  "skills": "Compétences",
+  "test": {
+    "bonjour": "test"
+  },
+  "resumeTab": {
+    "education": [
+      {
+        "school": "Epitech",
+        "degree": "L'école de l'innovation et de l'expertise informatique",
+        "graduated": "2022",
+        "description": "J'ai appris le développement à travers cette école. J'y ai appris les languages suivants: C/C++, Python, React, DevOps (Git, Docker, Ansible) et beaucoup de soft skills"
+      },
+      {
+        "school": "Institut de Genech",
+        "degree": "Bac Scientifique",
+        "graduated": "2017",
+        "description": "Cette école m'a permis d'étudier les mathématiques et la physique, 2 passions que j'ai depuis longtemps"
+      }
+    ],
+    "work": [
+      {
+        "company": "Freelance",
+        "years": "2018 - Présent",
+        "description": "Réalisation de différents projets comme l’automatisation de fabrication de logo. Réalisé majoritairement en Python. Découverte du télétravail."
+      },
+      {
+        "company": "BetM",
+        "title": "Stage de troisième année puis freelance - FullStack",
+        "years": "Avril 2020... 10 mois",
+        "description": "J'ai développé l'application mobile en React native et j'ai aidé pour la conception . J'ai travaillé sur le front, le back et l'optimisation (étant une application déjà existante).\nCela a été très intéressant et j'ai beaucoup appris grâce à cette application. J'y ai découvert Firebase, une technologie sur laquelle je suis maintenant à l'aise et que j'apprécie."
+      },
+      {
+        "company": "ACS-AMI",
+        "title": "Stage de deuxièmeannée - Fullstack",
+        "years": "Juillet 2018... 6 mois",
+        "description": "Première réelle découverte du monde du travail en tant que développeur. Concepteur et développeur d’une application à but décisionnel. Découverte du Web (Back avec Python SQL, Front avec ReactJS et Superset)"
+      }
+    ],
+    "skills": [
+      {
+        "name": "React Native",
+        "level": "95%"
+      },
+      {
+        "name": "Firebase",
+        "level": "90%"
+      },
+      {
+        "name": "React JS",
+        "level": "85%"
+      },
+      {
+        "name": "Python",
+        "level": "85%"
+      },
+      {
+        "name": "C/C++",
+        "level": "80%"
+      },
+      {
+        "name": "DevOps: Ansible/Docker",
+        "level": "75%"
+      }
+    ]
+  },
+  "testimonialsTab": [
+    {
+      "text": "Pédagogue, instruit, travailleur, Aurélien détient de nombreuses qualités pour la réalisation de vos projets.",
+      "user": "Thomas Meurice - Linkedin"
+    },
+    {
+      "text": "Très motivé pour réussir, il sait travailler en groupe et s'impliquer réellement dans ses projets.",
+      "user": "Victor Leblanc - Linkedin"
+    }
+  ],
+  "clientTestimonials": "Témoignages de clients",
+  "designBy": "Designé par Aurélien Vandaële en partant d'un template de Styleshout.com"
+}

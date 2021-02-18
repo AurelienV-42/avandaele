@@ -1,61 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {useTranslation} from 'react-i18next';
+import {socials, maltIcon} from '../configSocials';
 
-class Header extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isEnglish: true,
-        };
-    }
+const Header = () => {
+  const {t, i18n} = useTranslation();
 
-    render() {
-        const {data} = this.props;
+  const changeLocale = (newLanguage) => {
+    i18n.changeLanguage(newLanguage);
+  };
+  return (
+    <header id="home">
+      <nav id="nav-wrap">
+        <a className="mobile-btn" href={'#nav-wrap'} title="Show navigation">Show navigation</a>
+        <a className="mobile-btn" href={'#home'} title="Hide navigation">Hide navigation</a>
+        <ul id="nav" className="nav">
+          <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+          <li><a className="smoothscroll" href={'#about'}>{t('about')}</a></li>
+          <li><a className="smoothscroll" href={'#resume'}>{t('resume')}</a></li>
+          {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
+          <li><a className="smoothscroll" href={'#testimonials'}>{t('testimonials')}</a></li>
+          <li><a onClick={() => {
+            changeLocale(i18n.language === 'fr' ? 'en' : 'fr');
+          }} className="smoothscroll" href="#home">{i18n.language === 'fr' ? 'English' : 'French'}</a></li>
+        </ul>
+      </nav>
 
-        if(data){
-            var name = data.name;
-            var occupation= data.occupation;
-            var description= data.description;
-            var state= data.address.state;
-            var networks= data.social.map(function(network){
-                return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-            });
-        }
+      <div className="row banner">
+        <div className="banner-text">
+          <h1 className="responsive-headline">{t('titleHeader')}</h1>}
+          <h3><span>{t('bodyHeaderMark')}</span>{t('bodyHeader')}</h3>
+          <ul className="social">
+            {socials.map(item => {
+              return (<li key={item.name}>
+                  <a href={item.url} className={item.className} target="_blank">
+                    {item.name === 'malt' && maltIcon}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
 
-        return (
-            <header id="home">
-                <nav id="nav-wrap">
-                    <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-                    <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
-                    <ul id="nav" className="nav">
-                        <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-                        <li><a className="smoothscroll" href="#about">About</a></li>
-                        <li><a className="smoothscroll" href="#resume">Resume</a></li>
-                        {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
-                        <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-                        {this.state.isEnglish === true && <li><a onClick={() => { this.props.changeLanguage(); this.setState({isEnglish: false})}} className="smoothscroll" href="#home">French</a></li>}
-                        {this.state.isEnglish === false &&<li><a onClick={() => { this.props.changeLanguage(); this.setState({isEnglish: true})}} className="smoothscroll" href="#home">English</a></li>}
-                    </ul>
-                </nav>
-
-                <div className="row banner">
-                    <div className="banner-text">
-                        {this.props.language === 'en' && <h1 className="responsive-headline">I'm {name}.</h1>}
-                        {this.props.language === 'fr' && <h1 className="responsive-headline">Je suis {name}.</h1>}
-                        {this.props.language === 'en' && <h3>I'm a {state} based <span>{occupation}</span>. {description}.</h3>}
-                        {this.props.language === 'fr' && <h3><span>{occupation}</span> basé en {state}. {description}.</h3>}
-                        <hr />
-                        <ul className="social">
-                            {networks}
-                        </ul>
-                    </div>
-                </div>
-
-                <p className="scrolldown">
-                    <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-                </p>
-            </header>
-        );
-    }
-}
+      <p className="scrolldown">
+        <a className="smoothscroll" href={'#about'}><i className="icon-down-circle"/></a>
+      </p>
+    </header>
+  );
+};
 
 export default Header;

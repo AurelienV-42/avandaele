@@ -1,68 +1,43 @@
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 
-function About (props) {
-    const {data} = props;
+const About = () => {
+  const {t} = useTranslation();
 
-    let name = '';
-    let profilepic = '';
-    let bio = '';
-    let street = '';
-    let city = '';
-    let state = '';
-    let zip = '';
-    let email = '';
-    let resumeDownload = '';
-    let language = 'en';
+  return (
+    <section id="about">
+      <div className="row">
+        <div className="four columns">
+          <img className="profile-pic" src={'images/profilepic.png'} alt="Aurélien Vandaële Profile Pic"/>
+        </div>
+        <div className="seven columns main-col">
+          <h2>{t('whoAmI')}</h2>
 
-    if (data) {
-        name = data.name;
-        profilepic = "images/" + data.image;
-        bio = data.bio;
-        const {address} = data;
-        street = address.street;
-        city = address.city;
-        state = address.state;
-        zip = address.zip;
-        email = data.email;
-        resumeDownload = data.resumedownload;
-        language = props.language;
-    }
-
-    return (
-        <section id="about">
-            <div className="row">
-                <div className="three columns">
-                    <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
-                </div>
-                <div className="nine columns main-col">
-                    {language === 'en' && <h2>About Me</h2>}
-                    {language === 'fr' && <h2>À propos de moi</h2>}
-
-                    <p>{bio}</p>
-                    <div className="row">
-                        <div className="columns contact-details">
-                            {language === 'en' && <h2>Contact Details</h2>}
-                            {language === 'fr' && <h2>Contacts</h2>}
-                            <p className="address">
-                                <span>{name}</span><br />
-                                <span>{street}<br />
-                                    {city} {state}, {zip}
-                                </span><br />
-                                <span>{email}</span>
-                            </p>
-                        </div>
-                        <div className="columns download">
-                            <p>
-                                {language === 'en' && <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Download Resume</a>}
-                                {language === 'fr' && <a href={resumeDownload} className="button"><i className="fa fa-download"></i>Télécharger mon CV</a>}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          <p>{t('bio')}</p>
+          <div className="row">
+            <div className="columns contact-details">
+              <h2>{t('contacts')}</h2>
+              <p className="address">
+                <span>Aurélien Vandaële</span><br/>
+                <span>16 rue des Martyrs de la Résistance<br/>
+                  Seclin France, 59113
+                                </span><br/>
+                <span>aurelienvpro@gmail.com</span>
+              </p>
             </div>
+            <div className="columns download">
+              <p>
+                <a
+                  href={'https://media-exp1.licdn.com/dms/document/C562DAQEFe87AA3lmoA/profile-treasury-document-pdf-analyzed/0/1583550113242?e=1613743200&v=beta&t=wlw12NlKpePyh5YV_XspTvBYy31TNW5g83a1yOiMVSI'}
+                  className="button"><i className="fa fa-download"/>{t('downloadResume')}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </section>
-    );
-}
+    </section>
+  );
+};
 
 export default About;

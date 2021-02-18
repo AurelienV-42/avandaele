@@ -1,19 +1,15 @@
 {
-  "name": "MyWebCV",
+  "name": "webcv",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.0.24",
-    "@types/node": "^12.12.21",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "jquery": "^3.4.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
+    "i18next": "^19.8.8",
+    "jquery": "^3.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-i18n": "^1.0.1",
+    "react-i18next": "^11.8.7",
+    "react-scripts": "4.0.2",
     "typescript": "^3.7.4"
   },
   "scripts": {

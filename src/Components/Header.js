@@ -27,7 +27,7 @@ const Header = () => {
 
       <div className="row banner">
         <div className="banner-text">
-          <h1 className="responsive-headline">{t('titleHeader')}</h1>}
+          <h1 className="responsive-headline">{t('titleHeader')}</h1>
           <h3><span>{t('bodyHeaderMark')}</span>{t('bodyHeader')}</h3>
           <ul className="social">
             {socials.map(item => {

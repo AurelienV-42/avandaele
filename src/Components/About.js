@@ -28,7 +28,7 @@ const About = () => {
             <div className="columns download">
               <p>
                 <a
-                  href={'https://media-exp1.licdn.com/dms/document/C562DAQEFe87AA3lmoA/profile-treasury-document-pdf-analyzed/0/1583550113242?e=1613743200&v=beta&t=wlw12NlKpePyh5YV_XspTvBYy31TNW5g83a1yOiMVSI'}
+                  href={'https://media-exp1.licdn.com/dms/document/C4D2DAQEqDt8aJpXoyw/profile-treasury-document-pdf-analyzed/0/1613670069735?e=1613757600&v=beta&t=cSHs6Ra4jDcrV0TXI168ww_e_vLSm9skJZ_y-8yHm3E'}
                   className="button"><i className="fa fa-download"/>{t('downloadResume')}</a>
               </p>
             </div>

@@ -8,7 +8,7 @@ const About = () => {
     <section id="about">
       <div className="row">
         <div className="four columns">
-          <img className="profile-pic" src={'images/profilepic.png'} alt="Aurélien Vandaële Profile Pic"/>
+          <img className="profile-pic" src={'images/profilepic.jpeg'} alt="Aurélien Vandaële Profile Pic"/>
         </div>
         <div className="seven columns main-col">
           <h2>{t('whoAmI')}</h2>

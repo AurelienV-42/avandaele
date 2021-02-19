@@ -122,6 +122,10 @@ header .social li a svg {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .4));
 }
 
+header .social li a svg:hover {
+    fill: #11ABB0;
+}
+
 /* footer social links */
 
 footer h5 {

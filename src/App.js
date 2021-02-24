@@ -6,15 +6,15 @@ import Footer from './Components/Footer';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Testimonials from './Components/Testimonials';
-// import Portfolio from './Components/Portfolio';
+import Portfolio from './Components/Portfolio';
 
 const App = () => {
   return (
     <div className="App">
       <Header/>
       <About/>
+      <Portfolio/>
       <Resume/>
-      {/*<Portfolio/>*/}
       <Testimonials/>
       <Footer/>
     </div>

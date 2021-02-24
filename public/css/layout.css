@@ -275,8 +275,15 @@ ul#nav li.current a {
 #about {
     background: #4E4F50;
     padding-top: 96px;
-    padding-bottom: 66px;
+    margin-bottom: 170px;
     overflow: hidden;
+}
+
+#about svg {
+    position: absolute;
+    margin-top: -240px;
+    z-index: -1;
+    background: white;
 }
 
 #about a, #about a:visited {
@@ -544,200 +551,122 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-    background: #ebeeee;
+    background: white;
     padding-top: 90px;
     padding-bottom: 60px;
 }
 
 #portfolio h1 {
-    font: 15px/24px 'opensans-semibold', sans-serif;
+    font: 20px/24px 'Montserrat', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 48px;
-    color: #95A3A3;
+    color: #232E40;
 }
 
 /* Portfolio Content */
-#portfolio-wrapper .columns {
-    margin-bottom: 36px;
-}
-
-.portfolio-item .item-wrap {
-    background: #fff;
-    overflow: hidden;
-    position: relative;
-
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.portfolio-item .item-wrap a {
-    display: block;
-    cursor: pointer;
-}
-
-/* overlay */
-.portfolio-item .item-wrap .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-    -moz-opacity: 0;
-    filter: alpha(opacity=0);
-
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
-
-    background: url(../images/overlay-bg.png) repeat;
-}
-
-.portfolio-item .item-wrap .link-icon {
-    display: block;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-
-    opacity: 0;
-    -moz-opacity: 0;
-    filter: alpha(opacity=0);
-
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: -15px;
-}
-
-.portfolio-item .item-wrap img {
-    vertical-align: bottom;
-}
-
-.portfolio-item .portfolio-item-meta {
-    padding: 18px
-}
-
-.portfolio-item .portfolio-item-meta h5 {
-    font: 14px/21px 'Montserrat', sans-serif;
-    color: #fff;
-}
-
-.portfolio-item .portfolio-item-meta p {
-    font: 12px/18px 'opensans-light', sans-serif;
-    color: #c6c7c7;
-    margin-bottom: 0;
-}
-
-/* on hover */
-.portfolio-item:hover .overlay {
-    opacity: 1;
-    -moz-opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.portfolio-item:hover .link-icon {
-    opacity: 1;
-    -moz-opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-/* popup modal */
-.popup-modal {
-    max-width: 550px;
-    background: #fff;
-    position: relative;
-    margin: 0 auto;
-}
-
-.popup-modal .description-box {
-    padding: 12px 36px 18px 36px;
-}
-
-.popup-modal .description-box h4 {
+#portfolio p, #portfolio h3 {
     font: 15px/24px 'Montserrat', sans-serif;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.popup-modal .description-box p {
-    font: 14px/24px 'Montserrat', sans-serif;
-    color: #A1A1A1;
-    margin-bottom: 12px;
-}
-
-.popup-modal .description-box .categories {
-    font: 11px/21px 'opensans-light', sans-serif;
-    color: #A1A1A1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    text-align: left;
-}
-
-.popup-modal .description-box .categories i {
-    margin-right: 8px;
-}
-
-.popup-modal .link-box {
-    padding: 18px 36px;
-    background: #111;
-    text-align: left;
-}
-
-.popup-modal .link-box a {
-    color: #fff;
-    font: 11px/21px 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-.popup-modal a:hover {
-    color: #00CCCC;
-}
-
-.popup-modal a.popup-modal-dismiss {
-    margin-left: 24px;
+    color: #6F7CB2;
 }
 
 
-/* fadein/fadeout effect for modal popup
-/* ------------------------------------------------------------------ */
-
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content .popup-modal {
-    opacity: 0;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+#portfolio .betM {
+    display: flex;
+    padding-top: 50px;
+    padding-right: 350px;
+    padding-left: 350px;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
 
-/* content fadein */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
-    opacity: 1;
+#portfolio .betM-container {
+    display: flex;
+    flex: 1;
+    margin-bottom: 50px;
 }
 
-/* content fadeout */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
-    opacity: 0;
+#portfolio .betM-description-title, .betM-improvement1, .betM-improvement2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .betM-logo {
+    margin-bottom: 30px;
+}
+
+#portfolio .betM-description-title {
+    flex: 0.5
+}
+
+#portfolio .betM-improvement1 {
+    align-items: center;
+    flex: 0.3
+}
+
+#portfolio .betM-improvement2 {
+    align-items: center;
+    margin-left: 50px;
+    flex: 0.3
+}
+
+#portfolio .improvement-img {
+    margin-bottom: 20px;
+}
+
+#portfolio .betM-description {
+    width: 400px;
+}
+
+#portfolio h3 {
+    font: 20px/24px 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#portfolio .success-app {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .title-success-app {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#portfolio .smarti {
+    display: flex;
+    padding: 50px 350px;
+    flex-direction: column;
+    background-color: #F3F5FF;
+}
+
+#portfolio .header-smarti {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+#portfolio .logo-smarti {
+    flex: 0.3;
+    height: 300px;
+    margin-left: 50px;
+}
+
+#portfolio .description-smarti {
+    padding-left: 100px;
+    flex: 0.7;
+}
+
+#portfolio .description-smarti-title {
+    font: 30px/24px 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#portfolio .description-smarti-text {
+    font: 15px/24px 'Montserrat', sans-serif;
 }
 
 /* ------------------------------------------------------------------ */
@@ -762,7 +691,7 @@ ul#nav li.current a {
 }
 
 #call-to-action .header-col h1:before {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', serif;
     content: "\f0ac";
     padding-right: 10px;
     font-size: 72px;

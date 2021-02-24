@@ -12,9 +12,14 @@
   "education": "Education",
   "work": "Work",
   "skills": "Skills",
-  "test": {
-    "bonjour": "test"
-  },
+  "checkMyWorks": "Check Out Some of My Works!",
+  "luckToWork": "I had the chance to work in a very interesting start-up, betM. I worked there for 1 year.",
+  "newFeatures": "Addition of new features",
+  "conceptualization": "Conceptualization",
+  "design": "Design",
+  "successApp": "App N°50 in sport category on the AppStore",
+  "personalProjet": "Personal projects",
+  "smartiDescription": "Over the last few years I have completed several personal projects. Here I show you one of my latest projects which is available on the Google Play Store. I made this application to learn marketing (social networks, in-app), to improve my design skills and also to improve my react native skills.",
   "resumeTab": {
     "education": [
       {

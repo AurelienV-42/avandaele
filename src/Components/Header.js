@@ -16,8 +16,8 @@ const Header = () => {
         <ul id="nav" className="nav">
           <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
           <li><a className="smoothscroll" href={'#about'}>{t('about')}</a></li>
+          <li><a className="smoothscroll" href="#portfolio">Portfolio</a></li>
           <li><a className="smoothscroll" href={'#resume'}>{t('resume')}</a></li>
-          {/*<li><a className="smoothscroll" href="#portfolio">Works</a></li>*/}
           <li><a className="smoothscroll" href={'#testimonials'}>{t('testimonials')}</a></li>
           <li><a onClick={() => {
             changeLocale(i18n.language === 'fr' ? 'en' : 'fr');

@@ -26,6 +26,15 @@
 --------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
 
+    #about {
+        margin-bottom: 0;
+    }
+    #about svg {
+        display: none;
+    }
+    #portfolio {
+        display: none;
+    }
     /* header styles
    ------------------------------------------------------------------ */
     header .banner {
@@ -212,8 +221,6 @@
         line-height: 16px; /* reset line-height from 48px */
         border: none;
     }
-
-
     /* Header Styles
     -------------------------------------------------------------------- */
     header .banner {

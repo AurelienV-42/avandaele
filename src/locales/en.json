@@ -3,12 +3,13 @@
   "resume": "Resume",
   "testimonials": "Testimonials",
   "titleHeader": "I'm Aurélien Vandaële.",
-  "bodyHeaderMark": "I'm a France based Freelancer and student. ",
-  "bodyHeader": "Motivated and passionate, I've been studying computer science for 5 years and I've been freelancing for 3.",
+  "bodyHeaderMark": "I'm a France based Freelancer. ",
+  "bodyHeader": "I am a React Native developer now for more than 4 years.",
   "downloadResume": "Download my resume",
-  "whoAmI": "Who Am I?",
-  "contacts": "Contacts",
-  "bio": "22 years old, athletic, creative and passionate about animals",
+  "whoAmI": "Hello \uD83D\uDC4B",
+  "bio1":  "📍 Who am I?",
+  "bio2": "🚀 Freelance developer for more than 4 years, I worked on several Mobile and Web application projects under different technologies such as React Native | React JS | Next JS with Firebase, in short as well as long missions. ",
+  "bio3": "\uD83C\uDFA8 Intransigent on the UX/UI thanks to the different experiences and trainings I had the chance to realize. I'm also available to design your applications, you can contact me so that I can show you my former achievements!",
   "education": "Education",
   "work": "Work",
   "skills": "Skills",
@@ -37,21 +38,27 @@
     ],
     "work": [
       {
-        "company": "Freelance",
-        "years": "2018 - Present",
-        "description": "Completion of various projects such as the automation of logo manufacturing (completion of SVG in Pick&Place format). Mostly made in Python. Discovery of telework."
+        "company": "Efficience Digitale",
+        "title": "CTO - React Native & Firebase",
+        "years": "April 2022 to September 2022",
+        "description": "Efficience Digitale is an agency that innovates with a technical team in React Native.\nDuring this mission I performed a code audit in order to find the potential technical debt on this project. I also had the opportunity to do project management on 4 different projects in order to bring my expertise on these different subjects.\nI had the opportunity to work on UX/UI re-design (Thanks to Trello, Notion)\nRefactorisation of new features (multi language, offline version...)\n➤ Testing"
       },
       {
-        "company": "BetM",
-        "title": "Third year internship - Frontend developper",
-        "years": "April 2020... 4 months",
-        "description": "I developed the mobile application in native React and helped with the design. I worked on the front, back and optimization (being an existing application).\nIt was very interesting and I learned a lot from this application. I discovered Firebase, a technology I am now comfortable with and enjoy."
+        "company": "Circular",
+        "years": "May to June 2022",
+        "description": "Circular is a start-up that makes connected rings equipped with biosensors and connected to an application that analyzes body signals, allowing to improve sleep, physical activities and health.\nOn this mission I continued the development of their application in React Native. I had the opportunity to help Circular to put their product in production on the App Store."
       },
       {
-        "company": "ACS-AMI",
-        "title": "Second year internship - Fullstack developper",
-        "years": "July 2018... 6 months",
-        "description": "First profesionnal discovery working as developper. Designer and developper of an application for decision-making purposes. Discovered web development (Back: Python/SQL, Front: ReactJS and Superset framework)"
+        "company": "mindDay",
+        "title": "Developer Front - React Native",
+        "years": "February to March 2022",
+        "description": "This experience allowed me to help the front-end development of the mindDay web application. It allowed me to discover or deepen my skills on \n➤ Storybook\n➤ TypeScript\n➤ React Navigation\n➤ React Native Web"
+      },
+      {
+        "company": "betM",
+        "title": "Internship and freelance - FullStack",
+        "years": "April 2020... 10 months",
+        "description": "I had the chance to work in this very interesting start-up, betM. This experience allowed me to professionalize myself to manage part of a project alone. During this experience I had the chance to conceptualize, design and code new features and refactor (a lot...)The skills I used were React Native, Firebase, Node JS and React JS.To design and organize the project, I used Asana and Figma."
       }
     ],
     "skills": [
@@ -64,20 +71,16 @@
         "level": "90%"
       },
       {
-        "name": "React JS",
-        "level": "85%"
+        "name": "Figma",
+        "level": "90%"
       },
       {
-        "name": "Python",
+        "name": "React/Next JS",
         "level": "85%"
       },
       {
         "name": "C/C++",
         "level": "80%"
-      },
-      {
-        "name": "DevOps: Ansible/Docker",
-        "level": "75%"
       }
     ]
   },

@@ -18,7 +18,7 @@ cd avandaele
 ```
 
 
-Create a `.env` file similar to [`.env.example`](https://github.com/AurelienV-42/avandaele/blob/main/.env.example).
+Create a `.env` file similar to [`.env.example`](https://github.com/AurelienV-42/avandaele/blob/master/.env.example).
 
 Then install dependencies and run the development server:
 ```sh-session

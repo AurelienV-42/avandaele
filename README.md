@@ -1,11 +1,32 @@
-# Web CV
+<div align="center">
+    <a href="https://avandaele.fr"><h1 align="center">avandaele.fr</h1></a>
+
+My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com/), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Netlify](https://netlify.com/).
+
+</div>
+
+<br/>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46052dfd-bf80-4172-8578-47304c1adc60/deploy-status)](https://app.netlify.com/sites/brave-leavitt-9546ec/deploys)
 
-![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true "ReactJS Resume Website Template")
+## Running Locally
 
-### <a href="https://avandaele.fr/">Go on my website</a>
 
-## Description
+```sh-session
+git clone https://github.com/AurelienV-42/avandaele
+cd avandaele
+```
 
-This is a ReactJS project based on my personal resume.
+
+Create a `.env` file similar to [`.env.example`](https://github.com/AurelienV-42/avandaele/blob/main/.env.example).
+
+Then install dependencies and run the development server:
+```sh-session
+pnpm install
+pnpm dev
+```
+
+
+## Cloning / Forking
+
+Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.

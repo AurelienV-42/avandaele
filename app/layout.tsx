@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     default: "avandaele.fr",
     template: "%s | avandaele.fr",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "French freelance, designer and developer in React",
   openGraph: {
     title: "avandaele.fr",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "French freelance, designer and developer in React",
     url: "https://avandaele.fr",
     siteName: "avandaele.fr",
     images: [

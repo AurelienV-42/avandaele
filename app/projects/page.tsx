@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -29,7 +29,7 @@ import { Eye } from "lucide-react";
 export const revalidate = 60;
 
 export default async function ProjectsPage() {
-  const views = {};
+  const views:any = {};
 
   const featured = allProjects.find((project) => project.slug === "bellySculptingV2")!;
   const top2 = allProjects.find((project) => project.slug === "planetfall")!;

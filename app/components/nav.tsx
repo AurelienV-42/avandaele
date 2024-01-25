@@ -2,10 +2,13 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import routes from "@/config/routes";
+import Languages from "@/app/components/languages";
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const routesWithoutCurrentRoute = routes.filter(route => !route.href.includes('me')); // TODO
 
 	useEffect(() => {
 		if (!ref.current) return;
@@ -28,18 +31,14 @@ export const Navigation: React.FC = () => {
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
-						<Link
-							href="/projects"
+						{routesWithoutCurrentRoute.map((route, index) => (<Link
+							key={index}
+							href={route.href}
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
-							Projects
-						</Link>
-						<Link
-							href="/contact"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
-						>
-							Contact
-						</Link>
+							{route.name}
+						</Link>))}
+						<Languages textStyle={'duration-200 text-zinc-400 hover:text-zinc-100'} />
 					</div>
 
 					<Link

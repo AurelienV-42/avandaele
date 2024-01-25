@@ -36,6 +36,9 @@ export const Project = defineDocumentType(() => ({
 		date: {
 			type: "date",
 		},
+		dateStart: {
+			type: "date",
+		},
 		url: {
 			type: "string",
 		},
@@ -50,6 +53,26 @@ export const Project = defineDocumentType(() => ({
 		},
 	},
 	computedFields,
+}));
+
+export const Me = defineDocumentType(() => ({
+	name: 'Me',
+	filePathPattern: "me/**/*.mdx",
+	contentType: "mdx",
+	fields: {
+		title: {
+			type: "string",
+			required: true,
+		},
+		description: {
+			type: "string",
+			required: true,
+		},
+		img: {
+			type: 'string',
+			required: false,
+		},
+	},
 }));
 
 export const Page = defineDocumentType(() => ({
@@ -70,7 +93,7 @@ export const Page = defineDocumentType(() => ({
 
 export default makeSource({
 	contentDirPath: "./content",
-	documentTypes: [Page, Project],
+	documentTypes: [Page, Project, Me],
 	mdx: {
 		remarkPlugins: [remarkGfm],
 		rehypePlugins: [

@@ -3,7 +3,6 @@ import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "@/app/components/header/header";
 import "./mdx.css";
-import { ReportView } from "./view";
 import React from "react";
 import TestimonialsView from "@/app/projects/[slug]/TestimonialsView";
 

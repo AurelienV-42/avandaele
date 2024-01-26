@@ -11,15 +11,16 @@ export const Navigation: React.FC = () => {
   const [routesWithoutCurrentRoute, setRoutesWithoutCurrentRoute] =
     useState(routes);
 
+  const url =
+    typeof window !== "undefined"
+      ? window.location.pathname.replace("/", "")
+      : "";
+
   useEffect(() => {
-    const url =
-      typeof window !== "undefined"
-        ? window.location.pathname.replace("/", "")
-        : "";
     setRoutesWithoutCurrentRoute(
       routes.filter((route) => !route.href.includes(url)),
     );
-  }, [window.location.pathname]);
+  }, [url]);
 
   useEffect(() => {
     if (!ref.current) return;

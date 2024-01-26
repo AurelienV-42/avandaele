@@ -5,10 +5,6 @@ My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](h
 
 </div>
 
-<br/>
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46052dfd-bf80-4172-8578-47304c1adc60/deploy-status)](https://app.netlify.com/sites/brave-leavitt-9546ec/deploys)
-
 ## Running Locally
 
 

@@ -6,6 +6,11 @@ type Project = {
   playStoreURL?: string;
   appStoreURL?: string;
   img?: string;
+  testimonials?: {
+    name: string;
+    date: string;
+    text: string;
+  }[];
 };
 
 export default Project;

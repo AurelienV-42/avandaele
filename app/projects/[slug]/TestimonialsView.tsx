@@ -92,7 +92,9 @@ const TestimonialsView = ({ project }: { project: Project }) => {
                 </div>
               </div>
               <div className="text-lg font-medium leading-6 text-zinc-500">
-                {testimonial.date}
+                {Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(
+                  new Date(testimonial.date),
+                )}
               </div>
             </div>
             <TextWithSeeMore text={testimonial.text} />

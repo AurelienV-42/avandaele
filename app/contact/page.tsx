@@ -3,7 +3,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+import Malt from "@/public/icons/Malt";
 
 type Social = {
   icon: ReactNode;
@@ -13,12 +14,12 @@ type Social = {
 };
 
 const socials: Social[] = [
-  // {
-  // 	icon: <Malt width={20} height={20}/>,
-  // 	href: "https://www.malt.fr/profile/aurelienvandaele",
-  // 	label: "Malt",
-  // 	handle: "Aurélien Vandaële",
-  // },
+  {
+    icon: <Malt width={20} height={20} />,
+    href: "https://www.malt.fr/profile/aurelienvandaele",
+    label: "Malt",
+    handle: "Aurélien Vandaële",
+  },
   {
     icon: <Linkedin size={20} />,
     href: "https://www.linkedin.com/in/aurelien-vandaele/",
@@ -31,12 +32,12 @@ const socials: Social[] = [
     label: "Email",
     handle: "aurelienvpro@gmail.com",
   },
-  {
-    icon: <Github size={20} />,
-    href: "https://github.com/aurelienv-42",
-    label: "Github",
-    handle: "AurelienV-42",
-  },
+  // {
+  //   icon: <Github size={20} />,
+  //   href: "https://github.com/aurelienv-42",
+  //   label: "Github",
+  //   handle: "AurelienV-42",
+  // },
 ];
 
 const SocialCard = ({ social }: { social: Social }) => (

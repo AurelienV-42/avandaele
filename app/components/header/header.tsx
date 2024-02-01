@@ -5,6 +5,7 @@ import Project from "@/types/Project";
 import HeaderImage from "@/app/components/header/headerImage";
 import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
+import Malt from "@/public/icons/Malt";
 
 type Props = {
   project: Project;
@@ -59,6 +60,19 @@ export const Header: React.FC<Props> = ({ project }) => {
                 } `}
               />
             </Link>
+
+            <Link
+              target="_blank"
+              href="https://www.malt.fr/profile/aurelienvandaele"
+            >
+              <Malt
+                className={`w-6 h-6 duration-200 hover:font-medium ${
+                  isIntersecting
+                    ? " text-zinc-400 hover:text-zinc-100"
+                    : "text-zinc-600 hover:text-zinc-900"
+                } `}
+              />
+            </Link>
           </div>
 
           <Link
@@ -73,7 +87,7 @@ export const Header: React.FC<Props> = ({ project }) => {
           </Link>
         </div>
       </div>
-      <div className="container mx-auto relative isolate overflow-hidden  py-24 sm:py-32">
+      <div className="container mx-auto relative isolate overflow-hidden  py-16 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">

@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 export default async function ProjectsPage() {
   const featured = allProjects.find(
-    (project) => project.slug === "bellySculptingV2",
+    (project) => project.slug === "bellySculpting",
   )!;
   const top2 = allProjects.find((project) => project.slug === "greenLVL")!;
   const top3 = allProjects.find((project) => project.slug === "highstorm")!;
@@ -23,8 +23,8 @@ export default async function ProjectsPage() {
     )
     .sort(
       (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+        new Date(b.dateStart ?? Number.POSITIVE_INFINITY).getTime() -
+        new Date(a.dateStart ?? Number.POSITIVE_INFINITY).getTime(),
     );
 
   return (
@@ -47,11 +47,11 @@ export default async function ProjectsPage() {
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
+                    {featured.dateEnd ? (
+                      <time dateTime={new Date(featured.dateEnd).toISOString()}>
                         {Intl.DateTimeFormat(undefined, {
                           dateStyle: "medium",
-                        }).format(new Date(featured.date))}
+                        }).format(new Date(featured.dateEnd))}
                       </time>
                     ) : (
                       <span>SOON</span>

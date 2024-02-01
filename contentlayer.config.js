@@ -44,10 +44,10 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    date: {
+    dateStart: {
       type: "date",
     },
-    dateStart: {
+    dateEnd: {
       type: "date",
     },
     url: {

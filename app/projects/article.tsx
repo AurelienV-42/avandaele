@@ -20,14 +20,15 @@ const monthsBetweenTwoDates = (dateStart: string, dateEnd: string) => {
   return months + end.getMonth() - start.getMonth();
 };
 
-const period = (dateStart: string, dateEnd?: string) => {
-  if (!dateEnd) return "";
+const period = (dateStart?: string, dateEnd?: string) => {
+  if (!dateStart || !dateEnd) return "";
 
   const nbMonths = monthsBetweenTwoDates(dateStart, dateEnd);
   return ` - ${nbMonths} month${nbMonths > 1 ? "s" : ""}`;
 };
 
-const displayDate = (dateStart: string, dateEnd?: string) => {
+const displayDate = (dateStart?: string, dateEnd?: string) => {
+  if (!dateStart) return "";
   return `${formatDate(dateStart)}${period(dateStart, dateEnd)}`;
 };
 

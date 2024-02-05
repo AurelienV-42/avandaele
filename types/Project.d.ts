@@ -11,6 +11,10 @@ type Project = {
     date: string;
     text: string;
   }[];
+  slug?: string;
+  published?: boolean;
+  dateEnd?: string;
+  dateStart?: string;
 };
 
 export default Project;

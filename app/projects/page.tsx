@@ -8,7 +8,7 @@ import Project from "@/types/Project";
 
 export const revalidate = 60;
 
-const sortProjects = (a, b) =>
+const sortProjects = (a: Project, b: Project) =>
   new Date(b.dateStart ?? Number.POSITIVE_INFINITY).getTime() -
   new Date(a.dateStart ?? Number.POSITIVE_INFINITY).getTime();
 

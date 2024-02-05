@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
+import React from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -12,8 +13,7 @@ export const metadata: Metadata = {
   description: "French freelance, designer and developer in React",
   openGraph: {
     title: "avandaele.fr",
-    description:
-      "French freelance, designer and developer in React",
+    description: "French freelance, designer and developer in React",
     url: "https://avandaele.fr",
     siteName: "avandaele.fr",
     images: [
@@ -62,8 +62,9 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
       </body>

@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
 import routes from "@/config/routes";
 import Languages from "@/app/components/languages";
+import { CookieConsent } from "react-cookie-consent";
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
               {item.name}
             </Link>
           ))}
-          <Languages/>
+          <Languages />
         </ul>
       </nav>
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -36,7 +38,18 @@ export default function Home() {
           I am building applications for you
         </h2>
       </div>
+      <CookieConsent
+        style={{ background: "black", color: "white" }}
+        buttonStyle={{
+          color: "white",
+          background: "black",
+          fontSize: "14px",
+        }}
+        buttonText="OK"
+        overlay
+      >
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
     </div>
   );
-
 }

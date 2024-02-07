@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
-import { allProjects } from "contentlayer/generated";
+import { allProjects } from "../../../.contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
 import { Header } from "@/app/components/header/header";
 import "./mdx.css";
-import React from "react";
+import React, { useContext } from "react";
 import TestimonialsView from "@/app/projects/[slug]/TestimonialsView";
+import { LocaleContext } from "@/app/IntlContext";
 
 export const revalidate = 60;
 
@@ -19,6 +20,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
     .filter((p) => p.published)
     .map((p) => ({
       slug: p.slug,
+      locale: p.locale,
     }));
 }
 

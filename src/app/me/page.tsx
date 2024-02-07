@@ -1,9 +1,9 @@
 "use client";
 import { Navigation } from "../components/nav";
 import React from "react";
-import { allMes } from "contentlayer/generated";
-import { Header } from "@/app/components/header/header";
-import { Mdx } from "@/app/components/mdx";
+import { allMes } from "../../../.contentlayer/generated";
+import { Header } from "../components/header/header";
+import { Mdx } from "../components/mdx";
 import { notFound } from "next/navigation";
 
 export default function Example() {

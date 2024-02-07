@@ -1,12 +1,14 @@
-"use client";
+// "use client";
 import Link from "next/link";
 import React from "react";
-import Particles from "./components/particles";
+import Particles from "../components/particles";
 import routes from "@/config/routes";
-import Languages from "@/app/components/languages";
-import { CookieConsent } from "react-cookie-consent";
+import Languages from "../components/languages";
+// import { useTranslations } from "next-intl";
 
-export default function Home() {
+const Home = ({ params: { locale } }: { params: any }) => {
+  // const t = useTranslations("");
+
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-16 animate-fade-in">
@@ -35,21 +37,23 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          I am building applications for you
+          {/*{`I am building applications for you ${t("title")}`}*/}
         </h2>
       </div>
-      <CookieConsent
-        style={{ background: "black", color: "white" }}
-        buttonStyle={{
-          color: "white",
-          background: "black",
-          fontSize: "14px",
-        }}
-        buttonText="OK"
-        overlay
-      >
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
+      {/*<CookieConsent*/}
+      {/*  style={{ background: "black", color: "white" }}*/}
+      {/*  buttonStyle={{*/}
+      {/*    color: "white",*/}
+      {/*    background: "black",*/}
+      {/*    fontSize: "14px",*/}
+      {/*  }}*/}
+      {/*  buttonText="OK"*/}
+      {/*  overlay*/}
+      {/*>*/}
+      {/*  This website uses cookies to enhance the user experience.*/}
+      {/*</CookieConsent>*/}
     </div>
   );
-}
+};
+
+export default Home;

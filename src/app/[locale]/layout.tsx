@@ -1,9 +1,11 @@
-import "../global.css";
+import "../../global.css";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import { Analytics } from "../components/analytics";
 import React from "react";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 export const metadata: Metadata = {
   title: {
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
     template: "%s | avandaele.fr",
   },
   description: "French freelance, designer and developer in React",
+  metadataBase: new URL("https://avandaele.fr"),
   openGraph: {
     title: "avandaele.fr",
     description: "French freelance, designer and developer in React",
@@ -47,17 +50,23 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
+  src: "../../../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const t = useTranslations("");
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html
+      lang={locale}
+      className={[inter.variable, calSans.variable].join(" ")}
+    >
       <head>
         <Analytics />
       </head>

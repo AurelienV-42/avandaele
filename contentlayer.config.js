@@ -8,6 +8,11 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+const getLocale = (path) => {
+  const pathArray = path.split(".");
+  return pathArray.length > 2 ? pathArray.slice(-2)[0] : "en";
+};
+
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
   path: {
@@ -17,6 +22,10 @@ const computedFields = {
   slug: {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+  },
+  locale: {
+    type: "string",
+    resolve: (doc) => getLocale(doc._raw.flattenedPath),
   },
 };
 

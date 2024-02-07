@@ -1,4 +1,6 @@
 type Project = {
+  slug: string;
+  locale: string;
   title: string;
   description: string;
   url?: string;
@@ -11,7 +13,6 @@ type Project = {
     date: string;
     text: string;
   }[];
-  slug?: string;
   published?: boolean;
   dateEnd?: string;
   dateStart?: string;

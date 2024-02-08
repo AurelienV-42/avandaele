@@ -3,7 +3,6 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import routes from "@/config/routes";
-import Languages from "@/app/components/languages";
 
 export const Navigation: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -52,9 +51,6 @@ export const Navigation: React.FC = () => {
                 {route.name}
               </Link>
             ))}
-            <Languages
-              textStyle={"duration-200 text-zinc-400 hover:text-zinc-100"}
-            />
           </div>
 
           <Link

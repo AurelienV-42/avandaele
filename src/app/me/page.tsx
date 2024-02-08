@@ -2,8 +2,8 @@
 import { Navigation } from "../components/nav";
 import React from "react";
 import { allMes } from "contentlayer/generated";
-import { Header } from "@/app/components/header/header";
-import { Mdx } from "@/app/components/mdx";
+import { Header } from "@/src/app/components/header/header";
+import { Mdx } from "@/src/app/components/mdx";
 import { notFound } from "next/navigation";
 
 export default function Example() {

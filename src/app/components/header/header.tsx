@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Links from "@/app/components/header/links";
+import Links from "@/src/app/components/header/links";
 import Project from "@/types/Project";
-import HeaderImage from "@/app/components/header/headerImage";
+import HeaderImage from "@/src/app/components/header/headerImage";
 import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Malt from "@/public/icons/Malt";

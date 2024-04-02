@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write"
+    "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write",
+    "generate-sitemap": "node generate-sitemap.mjs"
   },
   "dependencies": {
     "@next/mdx": "^13.5.4",

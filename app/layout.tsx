@@ -1,22 +1,26 @@
-import "@/global.css";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
-import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
 import React from "react";
+import "../global.css";
+import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "avandaele.fr",
-    template: "%s | avandaele.fr",
+    default:
+      "Aurélien Vandaële - Freelance React Native Developer & UX/UI Designer",
+    template: "%s | Aurélien Vandaële",
   },
-  description: "French freelance, designer and developer in React",
+  description:
+    "Aurélien Vandaële, freelance specializing in React Native development and UX/UI design. Discover innovative mobile and web solutions.",
   metadataBase: new URL("https://avandaele.fr"),
   openGraph: {
-    title: "avandaele.fr",
-    description: "French freelance, designer and developer in React",
+    title:
+      "Aurélien Vandaële - Freelance React Native Developer & UX/UI Designer",
+    description:
+      "Aurélien Vandaële, freelance specializing in React Native development and UX/UI design. Explore my portfolio of innovative mobile and web solutions.",
     url: "https://avandaele.fr",
-    siteName: "avandaele.fr",
+    siteName: "Aurélien Vandaële's Portfolio",
     images: [
       {
         url: "https://avandaele.fr/og.png",
@@ -48,7 +52,7 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-  src: "../../public/fonts/CalSans-SemiBold.ttf",
+  src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
 

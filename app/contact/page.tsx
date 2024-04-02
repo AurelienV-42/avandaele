@@ -1,10 +1,10 @@
 "use client";
-import { Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
-import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
-import React, { ReactNode } from "react";
 import Malt from "@/public/icons/Malt";
+import { Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
+import { ReactNode } from "react";
+import { Card } from "../components/card";
+import { Navigation } from "../components/nav";
 
 type Social = {
   icon: ReactNode;

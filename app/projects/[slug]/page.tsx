@@ -1,10 +1,9 @@
-import { notFound } from "next/navigation";
+import { Header } from "@/app/components/header/header";
+import { Mdx } from "@/app/components/mdx";
+import TestimonialsView from "@/app/projects/[slug]/TestimonialsView";
 import { allProjects } from "contentlayer/generated";
-import { Mdx } from "@/src/app/components/mdx";
-import { Header } from "@/src/app/components/header/header";
+import { notFound } from "next/navigation";
 import "./mdx.css";
-import React from "react";
-import TestimonialsView from "@/src/app/projects/[slug]/TestimonialsView";
 
 export const revalidate = 60;
 

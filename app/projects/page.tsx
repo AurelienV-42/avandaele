@@ -1,9 +1,8 @@
-import React from "react";
-import { allProjects } from "contentlayer/generated";
-import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
-import { Article } from "./article";
 import Project from "@/types/Project";
+import { allProjects } from "contentlayer/generated";
+import { Card } from "../components/card";
+import { Navigation } from "../components/nav";
+import { Article } from "./article";
 
 export const revalidate = 60;
 
@@ -15,7 +14,7 @@ const filterProjects = (
   projects: Project[],
   featuredSlug: string,
   top2Slug: string,
-  top3Slug: string,
+  top3Slug: string
 ) =>
   projects
     .filter((p) => p.published)
@@ -23,21 +22,21 @@ const filterProjects = (
       (project) =>
         project.slug !== featuredSlug &&
         project.slug !== top2Slug &&
-        project.slug !== top3Slug,
+        project.slug !== top3Slug
     )
     .sort(sortProjects);
 
 export default async function ProjectsPage() {
-  const featured = allProjects.find(
-    (project) => project.slug === "bellySculpting",
+  const featured = allProjects.find((project) => project.slug === "impress")!;
+  const top2 = allProjects.find(
+    (project) => project.slug === "bellySculpting"
   )!;
-  const top2 = allProjects.find((project) => project.slug === "aurel")!;
-  const top3 = allProjects.find((project) => project.slug === "mindDay")!;
+  const top3 = allProjects.find((project) => project.slug === "aurel")!;
   const sorted = filterProjects(
     allProjects,
     featured?.slug,
     top2?.slug,
-    top3?.slug,
+    top3?.slug
   );
 
   return (
@@ -66,7 +65,7 @@ export default async function ProjectsPage() {
                   <Card key={project.slug}>
                     <Article project={project} />
                   </Card>
-                ),
+                )
             )}
           </div>
         </div>

@@ -12,12 +12,12 @@
   "dependencies": {
     "@next/mdx": "^13.5.6",
     "@upstash/redis": "^1.29.0",
-    "contentlayer":"^0.3.4",
+    "contentlayer": "^0.3.4",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.284.0",
     "markdown-wasm": "^1.2.0",
     "next": "^14.1.4",
-    "next-contentlayer":"^0.3.4",
+    "next-contentlayer": "^0.3.4",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-cookie-consent": "^9.0.0",
@@ -53,5 +53,6 @@
       "@opentelemetry/sdk-trace-node": "1.13.0",
       "@opentelemetry/semantic-conventions": "1.13.0"
     }
-  }
+  },
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }

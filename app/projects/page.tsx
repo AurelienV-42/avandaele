@@ -28,11 +28,11 @@ const filterProjects = (
 
 export default async function ProjectsPage() {
   const featured = allProjects.find(
-    (project) => project.slug === "collective-pantheon"
+    (project) => project.slug === "impress"
   )!;
-  const top2 = allProjects.find((project) => project.slug === "impress")!;
+  const top2 = allProjects.find((project) => project.slug === "epsor")!;
   const top3 = allProjects.find(
-    (project) => project.slug === "bellySculpting"
+    (project) => project.slug === "collective-pantheon"
   )!;
   const sorted = filterProjects(
     allProjects,

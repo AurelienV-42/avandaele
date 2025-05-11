@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Aurélien Vandaële, freelance specializing in React Native development and UX/UI design. Discover innovative mobile and web solutions.",
   metadataBase: new URL("https://avandaele.fr"),
+  alternates: {
+    canonical: "https://www.avandaele.fr/",
+  },
   openGraph: {
     title:
       "Aurélien Vandaële - Freelance React Native Developer & UX/UI Designer",

@@ -7,21 +7,19 @@ My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](h
 
 ## Running Locally
 
-
 ```sh-session
 git clone https://github.com/AurelienV-42/avandaele
 cd avandaele
 ```
 
-
 Create a `.env` file similar to [`.env.example`](https://github.com/AurelienV-42/avandaele/blob/master/.env.example).
 
 Then install dependencies and run the development server:
+
 ```sh-session
 pnpm install
 pnpm dev
 ```
-
 
 ## Cloning / Forking
 

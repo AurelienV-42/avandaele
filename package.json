@@ -1,58 +1,46 @@
 {
-  "name": "avandaele.fr",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write",
-    "generate-sitemap": "node generate-sitemap.mjs"
-  },
-  "dependencies": {
-    "@next/mdx": "^13.5.6",
-    "@upstash/redis": "^1.29.0",
-    "contentlayer": "^0.3.4",
-    "framer-motion": "^10.18.0",
-    "lucide-react": "^0.284.0",
-    "markdown-wasm": "^1.2.0",
-    "next": "^14.1.4",
-    "next-contentlayer": "^0.3.4",
-    "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-cookie-consent": "^9.0.0",
-    "react-dom": "^18.2.0",
-    "react-wrap-balancer": "^1.1.0",
-    "rehype-autolink-headings": "^7.1.0",
-    "rehype-pretty-code": "^0.10.2",
-    "rehype-slug": "^6.0.0",
-    "remark-gfm": "3.0.1",
-    "typescript": "^5.4.3"
-  },
-  "devDependencies": {
-    "@opentelemetry/api": "1.4.1",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "@tailwindcss/typography": "^0.5.12",
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "postcss-nesting": "^12.1.1",
-    "rome": "^12.1.3",
-    "tailwindcss": "^3.4.3",
-    "tailwindcss-debug-screens": "^2.2.1"
-  },
-  "pnpm": {
-    "overrides": {
-      "@opentelemetry/api": "1.4.1",
-      "@opentelemetry/core": "1.13.0",
-      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
-      "@opentelemetry/resources": "1.13.0",
-      "@opentelemetry/sdk-trace-base": "1.13.0",
-      "@opentelemetry/sdk-trace-node": "1.13.0",
-      "@opentelemetry/semantic-conventions": "1.13.0"
-    }
-  },
-  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
+	"name": "avandaele.fr",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"generate-sitemap": "node generate-sitemap.mjs"
+	},
+	"dependencies": {
+		"@upstash/redis": "^1.29.0",
+		"framer-motion": "^10.18.0",
+		"lucide-react": "^0.284.0",
+		"markdown-wasm": "^1.2.0",
+		"next": "^14.1.4",
+		"react": "^18.2.0",
+		"react-cookie-consent": "^9.0.0",
+		"react-dom": "^18.2.0",
+		"react-wrap-balancer": "^1.1.0",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-pretty-code": "^0.10.2",
+		"rehype-slug": "^6.0.0",
+		"remark-gfm": "3.0.1",
+		"typescript": "^5.4.3"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.12",
+		"@types/node": "^20.12.2",
+		"@types/react": "^18.2.73",
+		"@types/react-dom": "^18.2.23",
+		"autoprefixer": "^10.4.19",
+		"eslint": "^9.39.2",
+		"eslint-config-next": "^16.1.1",
+		"eslint-config-prettier": "^10.1.8",
+		"postcss": "^8.4.38",
+		"postcss-nesting": "^12.1.1",
+		"prettier": "^3.2.5",
+		"tailwindcss": "^3.4.3",
+		"tailwindcss-debug-screens": "^2.2.1",
+		"velite": "^0.3.1"
+	},
+	"packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }

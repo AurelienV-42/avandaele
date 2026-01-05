@@ -17,6 +17,8 @@
 	"projects": {
 		"title": "Projets",
 		"description": "Certains projets sont professionnels, d'autres personnels.",
-		"actuallyWorkingOn": "En cours"
+		"actuallyWorkingOn": "En cours",
+		"month": "mois",
+		"months": "mois"
 	}
 }

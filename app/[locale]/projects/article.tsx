@@ -1,27 +1,40 @@
 import { Link } from "@/i18n/navigation";
 import type Project from "@/types/Project";
 import { formatDate, period } from "@/utils/computeDates";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 type Props = {
 	project: Project;
 	featured?: boolean;
 };
 
-const displayDate = (dateStart?: string, dateEnd?: string): string => {
+const displayDate = (
+	dateStart: string | undefined,
+	dateEnd: string | undefined,
+	locale: string,
+	monthLabel: string,
+	monthsLabel: string,
+): string => {
 	if (!dateStart) return "";
-	return `${formatDate(dateStart)}${period(dateStart, dateEnd)}`;
+	return `${formatDate(dateStart, locale)}${period(dateStart, dateEnd, monthLabel, monthsLabel)}`;
 };
 
 export async function Article({
 	project,
 	featured,
 }: Props): Promise<React.ReactElement> {
+	const locale = await getLocale();
 	const t = await getTranslations("projects");
 
 	const dateDisplay = project.dateEnd ? (
 		<time dateTime={new Date(project.dateEnd).toISOString()}>
-			{displayDate(project.dateStart, project.dateEnd)}
+			{displayDate(
+				project.dateStart,
+				project.dateEnd,
+				locale,
+				t("month"),
+				t("months"),
+			)}
 		</time>
 	) : (
 		<span>{t("actuallyWorkingOn")}</span>

@@ -17,6 +17,8 @@
 	"projects": {
 		"title": "Projects",
 		"description": "Some of the projects are from work and some are on my own time.",
-		"actuallyWorkingOn": "In progress"
+		"actuallyWorkingOn": "In progress",
+		"month": "month",
+		"months": "months"
 	}
 }

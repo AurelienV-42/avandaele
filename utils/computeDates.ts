@@ -1,5 +1,5 @@
-export const formatDate = (date: string) => {
-	return Intl.DateTimeFormat(undefined, {
+export const formatDate = (date: string, locale: string): string => {
+	return Intl.DateTimeFormat(locale, {
 		dateStyle: "medium",
 	}).format(new Date(date));
 };
@@ -11,9 +11,14 @@ export const monthsBetweenTwoDates = (dateStart: string, dateEnd: string) => {
 	return months + end.getMonth() - start.getMonth();
 };
 
-export const period = (dateStart?: string, dateEnd?: string) => {
+export const period = (
+	dateStart: string | undefined,
+	dateEnd: string | undefined,
+	monthLabel: string,
+	monthsLabel: string,
+): string => {
 	if (!dateStart || !dateEnd) return "";
 
 	const nbMonths = monthsBetweenTwoDates(dateStart, dateEnd);
-	return ` - ${nbMonths} month${nbMonths > 1 ? "s" : ""}`;
+	return ` - ${nbMonths} ${nbMonths > 1 ? monthsLabel : monthLabel}`;
 };

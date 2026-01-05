@@ -55,10 +55,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		title: t("metaTitle"),
 		description: t("metaDescription"),
 		alternates: {
-			canonical: `${baseUrl}/contact`,
+			canonical: `${baseUrl}/contact/`,
 			languages: {
-				fr: `${BASE_URL}/contact`,
-				en: `${BASE_URL}/en/contact`,
+				fr: `${BASE_URL}/contact/`,
+				en: `${BASE_URL}/en/contact/`,
 			},
 		},
 	};

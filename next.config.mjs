@@ -14,6 +14,7 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+	trailingSlash: true,
 };
 
 export default withNextIntl(nextConfig);

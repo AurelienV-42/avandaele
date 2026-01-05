@@ -8,7 +8,7 @@ const personJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "Person",
 	name: "Aurélien Vandaële",
-	url: "https://www.avandaele.fr",
+	url: "https://www.avandaele.fr/",
 	jobTitle: "Freelance CTO & Startup Founder",
 	sameAs: [
 		"https://www.linkedin.com/in/aurelien-vandaele/",

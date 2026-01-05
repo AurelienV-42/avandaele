@@ -45,10 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		title: project.title,
 		description: project.description,
 		alternates: {
-			canonical: `${baseUrl}/projects/${slug}`,
+			canonical: `${baseUrl}/projects/${slug}/`,
 			languages: {
-				fr: `${BASE_URL}/projects/${slug}`,
-				en: `${BASE_URL}/en/projects/${slug}`,
+				fr: `${BASE_URL}/projects/${slug}/`,
+				en: `${BASE_URL}/en/projects/${slug}/`,
 			},
 		},
 		openGraph: {
@@ -93,11 +93,11 @@ export default async function PostPage({
 		"@type": "Article",
 		headline: project.title,
 		description: project.description,
-		url: `${baseUrl}/projects/${slug}`,
+		url: `${baseUrl}/projects/${slug}/`,
 		author: {
 			"@type": "Person",
 			name: "Aurélien Vandaële",
-			url: BASE_URL,
+			url: `${BASE_URL}/`,
 		},
 		...(project.dateStart && { datePublished: project.dateStart }),
 		...(project.dateEnd && { dateModified: project.dateEnd }),

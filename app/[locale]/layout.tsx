@@ -20,9 +20,12 @@ export function generateStaticParams(): { locale: Locale }[] {
 	return routing.locales.map((locale) => ({ locale }));
 }
 
+const BASE_URL = "https://www.avandaele.fr";
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
+	const canonicalUrl = locale === "fr" ? `${BASE_URL}/` : `${BASE_URL}/en/`;
 
 	return {
 		title: {
@@ -32,10 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		description: t("description"),
 		metadataBase: new URL("https://avandaele.fr"),
 		alternates: {
-			canonical: "https://www.avandaele.fr/",
+			canonical: canonicalUrl,
 			languages: {
-				fr: "https://www.avandaele.fr/",
-				en: "https://www.avandaele.fr/en/",
+				fr: `${BASE_URL}/`,
+				en: `${BASE_URL}/en/`,
 			},
 		},
 		openGraph: {

@@ -25,10 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		title: t("metaTitle"),
 		description: t("metaDescription"),
 		alternates: {
-			canonical: `${baseUrl}/me`,
+			canonical: `${baseUrl}/me/`,
 			languages: {
-				fr: `${BASE_URL}/me`,
-				en: `${BASE_URL}/en/me`,
+				fr: `${BASE_URL}/me/`,
+				en: `${BASE_URL}/en/me/`,
 			},
 		},
 	};

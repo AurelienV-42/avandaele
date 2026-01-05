@@ -1,12 +1,10 @@
-"use client";
-import { Navigation } from "../components/nav";
-import React from "react";
-import { me } from "#site/content";
 import { Header } from "@/app/components/header/header";
 import { Mdx } from "@/app/components/mdx";
+import { Navigation } from "@/app/components/nav";
+import { me } from "#site/content";
 import { notFound } from "next/navigation";
 
-export default function Example() {
+export default function MePage(): React.ReactElement {
 	const project = me[0];
 
 	if (!project) {

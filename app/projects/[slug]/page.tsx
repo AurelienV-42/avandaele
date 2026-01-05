@@ -2,6 +2,7 @@ import { Header } from "@/app/components/header/header";
 import { Mdx } from "@/app/components/mdx";
 import TestimonialsView from "@/app/projects/[slug]/TestimonialsView";
 import { projects } from "#site/content";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import "./mdx.css";
 
@@ -19,6 +20,32 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 		.map((p) => ({
 			slug: p.slug,
 		}));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { slug } = await params;
+	const project = projects.find((p) => p.slug === slug);
+
+	if (!project) {
+		return {};
+	}
+
+	return {
+		title: project.title,
+		description: project.description,
+		openGraph: {
+			title: project.title,
+			description: project.description,
+			type: "article",
+			...(project.ogImage && { images: [{ url: project.ogImage }] }),
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: project.title,
+			description: project.description,
+			...(project.ogImage && { images: [project.ogImage] }),
+		},
+	};
 }
 
 export default async function PostPage({ params }: Props) {

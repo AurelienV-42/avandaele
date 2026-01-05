@@ -105,11 +105,32 @@ const components = {
 	img: ({
 		className,
 		alt,
+		src,
 		...props
-	}: React.ImgHTMLAttributes<HTMLImageElement>) => (
-		// eslint-disable-next-line @next/next/no-img-element
-		<img className={clsx("rounded-md", className)} alt={alt} {...props} />
-	),
+	}: React.ImgHTMLAttributes<HTMLImageElement>) => {
+		const isVideo = src && /\.(webm|mp4|ogg|mov)$/i.test(src);
+		if (isVideo) {
+			return (
+				<video
+					className={clsx("rounded-md w-full", className)}
+					src={src}
+					autoPlay
+					loop
+					muted
+					playsInline
+				/>
+			);
+		}
+		return (
+			// eslint-disable-next-line @next/next/no-img-element
+			<img
+				className={clsx("rounded-md", className)}
+				alt={alt}
+				src={src}
+				{...props}
+			/>
+		);
+	},
 	hr: ({ ...props }) => (
 		<hr className="my-4 border-zinc-200 md:my-8" {...props} />
 	),

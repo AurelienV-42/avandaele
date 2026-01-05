@@ -4,8 +4,9 @@ import Links from "@/app/components/header/links";
 import Project from "@/types/Project";
 import HeaderImage from "@/app/components/header/headerImage";
 import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Malt from "@/public/icons/Malt";
+import { LanguageSwitcher } from "@/app/components/language-switcher";
 
 type Props = {
 	project: Project;
@@ -73,6 +74,13 @@ export const Header: React.FC<Props> = ({ project }) => {
 								} `}
 							/>
 						</Link>
+						<LanguageSwitcher
+							className={`px-2 py-1 text-sm font-medium duration-200 disabled:opacity-50 ${
+								isIntersecting
+									? "text-zinc-400 hover:text-zinc-100"
+									: "text-zinc-600 hover:text-zinc-900"
+							}`}
+						/>
 					</div>
 
 					<Link

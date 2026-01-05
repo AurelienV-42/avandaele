@@ -1,21 +1,33 @@
 "use client";
+import { Link, usePathname } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import routes from "@/config/routes";
+import { useTranslations } from "next-intl";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { LanguageSwitcher } from "./language-switcher";
 
-export const Navigation: React.FC = () => {
+type Route = {
+	name: string;
+	href: string;
+};
+
+export const Navigation = (): React.ReactElement => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
+	const t = useTranslations("nav");
+	const pathname = usePathname();
 
-	const url =
-		typeof window !== "undefined"
-			? window.location.pathname.replace("/", "")
-			: "";
+	const routes: Route[] = useMemo(
+		() => [
+			{ name: t("me"), href: "/me" },
+			{ name: t("projects"), href: "/projects" },
+			{ name: t("contact"), href: "/contact" },
+		],
+		[t],
+	);
 
 	const routesWithoutCurrentRoute = useMemo(
-		() => routes.filter((route) => !route.href.includes(url)),
-		[url],
+		() => routes.filter((route) => !pathname.includes(route.href)),
+		[pathname, routes],
 	);
 
 	useEffect(() => {
@@ -38,7 +50,7 @@ export const Navigation: React.FC = () => {
 				}`}
 			>
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-					<div className="flex justify-between gap-8">
+					<div className="flex items-center gap-8">
 						{routesWithoutCurrentRoute.map((route, index) => (
 							<Link
 								key={index}
@@ -48,6 +60,7 @@ export const Navigation: React.FC = () => {
 								{route.name}
 							</Link>
 						))}
+						<LanguageSwitcher />
 					</div>
 
 					<Link

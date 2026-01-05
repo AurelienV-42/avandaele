@@ -15,6 +15,7 @@ type Project = {
 	published?: boolean;
 	dateEnd?: string;
 	dateStart?: string;
+	locale: string;
 };
 
 export default Project;

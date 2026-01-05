@@ -1,9 +1,18 @@
 "use client";
-import routes from "@/config/routes";
-import Link from "next/link";
-import Particles from "./components/particles";
+import { LanguageSwitcher } from "@/app/components/language-switcher";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import Particles from "../components/particles";
 
-export default function Home() {
+export default function Home(): React.ReactElement {
+	const t = useTranslations();
+
+	const routes = [
+		{ name: t("nav.me"), href: "/me" },
+		{ name: t("nav.projects"), href: "/projects" },
+		{ name: t("nav.contact"), href: "/contact" },
+	];
+
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
 			<nav className="my-16 animate-fade-in">
@@ -17,6 +26,7 @@ export default function Home() {
 							{item.name}
 						</Link>
 					))}
+					<LanguageSwitcher />
 				</ul>
 			</nav>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
@@ -30,22 +40,8 @@ export default function Home() {
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
-				<h2 className="text-sm text-zinc-500 ">
-					Freelance React Native Developer and Designer UX/UI
-				</h2>
+				<h2 className="text-sm text-zinc-500 ">{t("home.subtitle")}</h2>
 			</div>
-			{/* <CookieConsent
-				style={{ background: "black", color: "white" }}
-				buttonStyle={{
-					color: "white",
-					background: "black",
-					fontSize: "14px",
-				}}
-				buttonText="OK"
-				overlay
-			>
-				This website uses cookies to enhance the user experience.
-			</CookieConsent> */}
 		</div>
 	);
 }

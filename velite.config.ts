@@ -16,7 +16,7 @@ export default defineConfig({
 	collections: {
 		projects: {
 			name: "Project",
-			pattern: "projects/**/*.mdx",
+			pattern: "projects/{en,fr}/*.mdx",
 			schema: s
 				.object({
 					title: s.string().max(99),
@@ -35,16 +35,19 @@ export default defineConfig({
 				})
 				.transform((data, { meta }) => {
 					const slug = meta.basename?.replace(/\.mdx$/, "") || "";
+					const locale = meta.path.includes("/en/") ? "en" : "fr";
 					return {
 						...data,
 						slug,
-						path: `/projects/${slug}`,
+						locale,
+						path:
+							locale === "fr" ? `/projects/${slug}` : `/en/projects/${slug}`,
 					};
 				}),
 		},
 		me: {
 			name: "Me",
-			pattern: "me/**/*.mdx",
+			pattern: "me/{en,fr}/*.mdx",
 			schema: s
 				.object({
 					title: s.string().max(99),
@@ -53,10 +56,14 @@ export default defineConfig({
 					metadata: s.metadata(),
 					content: s.mdx(),
 				})
-				.transform((data, { meta }) => ({
-					...data,
-					slug: meta.basename?.replace(/\.mdx$/, "") || "",
-				})),
+				.transform((data, { meta }) => {
+					const locale = meta.path.includes("/en/") ? "en" : "fr";
+					return {
+						...data,
+						slug: meta.basename?.replace(/\.mdx$/, "") || "",
+						locale,
+					};
+				}),
 		},
 	},
 	mdx: {

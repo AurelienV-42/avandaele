@@ -1,24 +1,16 @@
 "use client";
-import Project from "@/types/Project";
-import {
-	ArrowBigDown,
-	ArrowBigUp,
-	ArrowDown,
-	ArrowUp,
-	Star,
-	StarIcon,
-	Stars,
-} from "lucide-react";
-import React, { useState } from "react";
+import type Project from "@/types/Project";
+import { ArrowDown, ArrowUp, StarIcon } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 const truncateLength = 200;
 
-const TextWithSeeMore = ({ text }: { text: string }) => {
+const TextWithSeeMore = ({ text }: { text: string }): React.ReactElement => {
 	const [isTruncated, setIsTruncated] = useState(true);
 	const resultString = isTruncated ? text.slice(0, truncateLength) : text;
 
-	const toggleIsTruncated = () => {
+	const toggleIsTruncated = (): void => {
 		setIsTruncated(!isTruncated);
 	};
 
@@ -36,6 +28,7 @@ const TextWithSeeMore = ({ text }: { text: string }) => {
 				{text.length > truncateLength && (
 					<div className="flex flex-row items-center justify-center w-full">
 						<button
+							type="button"
 							className="text-sm font-medium leading-6 text-zinc-500"
 							onClick={toggleIsTruncated}
 						>
@@ -48,15 +41,18 @@ const TextWithSeeMore = ({ text }: { text: string }) => {
 	);
 };
 
-const OrangeStar = () => (
+const OrangeStar = (): React.ReactElement => (
 	<StarIcon color={"orange"} fill={"orange"} className="ml-1 w-4 h-4" />
 );
 
-const TestimonialsView = ({ project }: { project: Project }) => {
+const TestimonialsView = ({
+	project,
+}: {
+	project: Project;
+}): React.ReactElement => {
 	if (!project || !project.testimonials || !project.testimonials.length)
 		return <div />;
 
-	// grid
 	return (
 		<div className={"space-y-4"}>
 			<h2>Testimonials</h2>

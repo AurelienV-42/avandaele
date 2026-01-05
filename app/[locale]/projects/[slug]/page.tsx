@@ -1,30 +1,37 @@
 import { Header } from "@/app/components/header/header";
 import { Mdx } from "@/app/components/mdx";
-import TestimonialsView from "@/app/projects/[slug]/TestimonialsView";
+import { redirect } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 import { projects } from "#site/content";
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "./mdx.css";
+import TestimonialsView from "./TestimonialsView";
 
 export const revalidate = 60;
 
 type Props = {
 	params: Promise<{
+		locale: Locale;
 		slug: string;
 	}>;
 };
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-	return projects
-		.filter((p) => p.published)
-		.map((p) => ({
-			slug: p.slug,
-		}));
+export function generateStaticParams(): { locale: Locale; slug: string }[] {
+	return routing.locales.flatMap((locale) =>
+		projects
+			.filter((p) => p.published && p.locale === locale)
+			.map((p) => ({
+				locale,
+				slug: p.slug,
+			})),
+	);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	const { slug } = await params;
-	const project = projects.find((p) => p.slug === slug);
+	const { locale, slug } = await params;
+	const project = projects.find((p) => p.slug === slug && p.locale === locale);
 
 	if (!project) {
 		return {};
@@ -48,11 +55,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	};
 }
 
-export default async function PostPage({ params }: Props) {
-	const { slug } = await params;
-	const project = projects.find((project) => project.slug === slug);
+export default async function PostPage({
+	params,
+}: Props): Promise<React.ReactElement> {
+	const { locale, slug } = await params;
+	setRequestLocale(locale);
+
+	const project = projects.find(
+		(project) => project.slug === slug && project.locale === locale,
+	);
 
 	if (!project) {
+		const frProject = projects.find(
+			(p) => p.slug === slug && p.locale === "fr",
+		);
+		if (frProject) {
+			redirect({ href: `/projects/${slug}`, locale: "fr" });
+		}
 		notFound();
 	}
 

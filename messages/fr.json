@@ -1,0 +1,22 @@
+{
+	"metadata": {
+		"title": "Aurélien Vandaële - Développeur React Native Freelance & Designer UX/UI",
+		"template": "%s | Aurélien Vandaële",
+		"description": "Aurélien Vandaële, freelance spécialisé en développement React Native et design UX/UI. Découvrez des solutions mobiles et web innovantes.",
+		"ogDescription": "Aurélien Vandaële, freelance spécialisé en développement React Native et design UX/UI. Explorez mon portfolio de solutions mobiles et web innovantes.",
+		"siteName": "Portfolio d'Aurélien Vandaële"
+	},
+	"nav": {
+		"me": "Moi",
+		"projects": "Projets",
+		"contact": "Contact"
+	},
+	"home": {
+		"subtitle": "Développeur React Native Freelance et Designer UX/UI"
+	},
+	"projects": {
+		"title": "Projets",
+		"description": "Certains projets sont professionnels, d'autres personnels.",
+		"actuallyWorkingOn": "En cours"
+	}
+}

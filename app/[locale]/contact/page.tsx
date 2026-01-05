@@ -1,10 +1,10 @@
 "use client";
+import { Card } from "@/app/components/card";
+import { Navigation } from "@/app/components/nav";
+import { Link } from "@/i18n/navigation";
 import Malt from "@/public/icons/Malt";
 import { Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
-import { ReactNode } from "react";
-import { Card } from "../components/card";
-import { Navigation } from "../components/nav";
+import type { ReactNode } from "react";
 
 type Social = {
 	icon: ReactNode;
@@ -32,19 +32,12 @@ const socials: Social[] = [
 		label: "Email",
 		handle: "aurelienvpro@gmail.com",
 	},
-	// {
-	//   icon: <Github size={20} />,
-	//   href: "https://github.com/aurelienv-42",
-	//   label: "Github",
-	//   handle: "AurelienV-42",
-	// },
 ];
 
-const SocialCard = ({ social }: { social: Social }) => (
+const SocialCard = ({ social }: { social: Social }): React.ReactElement => (
 	<Card>
 		<Link
 			href={social.href}
-			target="_blank"
 			className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 		>
 			<span
@@ -66,7 +59,7 @@ const SocialCard = ({ social }: { social: Social }) => (
 	</Card>
 );
 
-export default function Example() {
+export default function ContactPage(): React.ReactElement {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />

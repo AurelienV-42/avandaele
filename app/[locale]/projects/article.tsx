@@ -1,25 +1,30 @@
-import Link from "next/link";
-import Project from "@/types/Project";
-import React from "react";
+import { Link } from "@/i18n/navigation";
+import type Project from "@/types/Project";
 import { formatDate, period } from "@/utils/computeDates";
+import { getTranslations } from "next-intl/server";
 
 type Props = {
 	project: Project;
 	featured?: boolean;
 };
 
-const displayDate = (dateStart?: string, dateEnd?: string) => {
+const displayDate = (dateStart?: string, dateEnd?: string): string => {
 	if (!dateStart) return "";
 	return `${formatDate(dateStart)}${period(dateStart, dateEnd)}`;
 };
 
-export const Article = ({ project, featured }: Props) => {
+export async function Article({
+	project,
+	featured,
+}: Props): Promise<React.ReactElement> {
+	const t = await getTranslations("projects");
+
 	const dateDisplay = project.dateEnd ? (
 		<time dateTime={new Date(project.dateEnd).toISOString()}>
 			{displayDate(project.dateStart, project.dateEnd)}
 		</time>
 	) : (
-		<span>SOON</span>
+		<span>{t("actuallyWorkingOn")}</span>
 	);
 
 	const articleClass = featured
@@ -48,4 +53,4 @@ export const Article = ({ project, featured }: Props) => {
 			</article>
 		</Link>
 	);
-};
+}

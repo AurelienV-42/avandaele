@@ -98,6 +98,13 @@ export const Header: React.FC<Props> = ({ project }) => {
 			<div className="container mx-auto relative isolate overflow-hidden  py-16 sm:py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
 					<div className="mx-auto max-w-2xl lg:mx-0">
+						{project.icon && (
+							<img
+								src={project.icon}
+								alt=""
+								className="w-16 h-16 mx-auto mb-4 rounded-2xl object-cover"
+							/>
+						)}
 						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-display">
 							{project.title}
 						</h1>

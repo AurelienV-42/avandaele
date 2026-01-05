@@ -46,9 +46,18 @@ export async function Article({
 					<div className="text-xs text-zinc-100">{dateDisplay}</div>
 				</div>
 
-				<h2 id="featured-post" className={titleClass}>
-					{project.title}
-				</h2>
+				<div className="flex items-center gap-3 mt-4">
+					{project.icon && (
+						<img
+							src={project.icon}
+							alt=""
+							className="w-8 h-8 rounded-lg object-cover"
+						/>
+					)}
+					<h2 id="featured-post" className={titleClass.replace("mt-4 ", "")}>
+						{project.title}
+					</h2>
+				</div>
 				<p className={descriptionClass}>{project.description}</p>
 			</article>
 		</Link>

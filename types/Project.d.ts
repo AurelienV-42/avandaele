@@ -6,6 +6,7 @@ type Project = {
 	playStoreURL?: string;
 	appStoreURL?: string;
 	img?: string;
+	icon?: string;
 	testimonials?: {
 		name: string;
 		date: string;

@@ -29,6 +29,7 @@ export default defineConfig({
 					playStoreURL: s.string().optional(),
 					appStoreURL: s.string().optional(),
 					ogImage: s.string().optional(),
+					icon: s.string().optional(),
 					testimonials: s.array(s.any()).optional(),
 					metadata: s.metadata(),
 					content: s.mdx(),

@@ -1,25 +1,22 @@
 "use client";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import routes from "@/config/routes";
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
 	const [isIntersecting, setIntersecting] = useState(true);
-	const [routesWithoutCurrentRoute, setRoutesWithoutCurrentRoute] =
-		useState(routes);
 
 	const url =
 		typeof window !== "undefined"
 			? window.location.pathname.replace("/", "")
 			: "";
 
-	useEffect(() => {
-		setRoutesWithoutCurrentRoute(
-			routes.filter((route) => !route.href.includes(url)),
-		);
-	}, [url]);
+	const routesWithoutCurrentRoute = useMemo(
+		() => routes.filter((route) => !route.href.includes(url)),
+		[url],
+	);
 
 	useEffect(() => {
 		if (!ref.current) return;

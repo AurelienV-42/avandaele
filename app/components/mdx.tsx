@@ -1,5 +1,6 @@
 // @ts-nocheck
 import * as React from "react";
+import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import * as runtime from "react/jsx-runtime";
@@ -8,7 +9,7 @@ function clsx(...args: any) {
 	return args.filter(Boolean).join(" ");
 }
 
-const useMDXComponent = (code: string) => {
+const getMDXComponent = (code: string) => {
 	const fn = new Function(code);
 	return fn({ ...runtime }).default;
 };
@@ -169,8 +170,9 @@ interface MdxProps {
 	code: string;
 }
 
+/* eslint-disable react-hooks/static-components */
 export function Mdx({ code }: MdxProps) {
-	const Component = useMDXComponent(code);
+	const Component = useMemo(() => getMDXComponent(code), [code]);
 
 	return (
 		<div className="mdx">
@@ -178,3 +180,4 @@ export function Mdx({ code }: MdxProps) {
 		</div>
 	);
 }
+/* eslint-enable react-hooks/static-components */

@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			template: t("template"),
 		},
 		description: t("description"),
-		metadataBase: new URL("https://avandaele.fr"),
+		metadataBase: new URL(BASE_URL),
 		alternates: {
 			canonical: canonicalUrl,
 			languages: {
@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		openGraph: {
 			title: t("title"),
 			description: t("ogDescription"),
-			url: "https://avandaele.fr",
+			url: BASE_URL,
 			siteName: t("siteName"),
 			images: [
 				{
-					url: "https://avandaele.fr/og.png",
+					url: `${BASE_URL}/og.png`,
 					width: 1920,
 					height: 1080,
 				},

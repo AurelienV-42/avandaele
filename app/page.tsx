@@ -1,7 +1,6 @@
 "use client";
 import routes from "@/config/routes";
 import Link from "next/link";
-import { CookieConsent } from "react-cookie-consent";
 import Particles from "./components/particles";
 
 export default function Home() {
@@ -35,7 +34,7 @@ export default function Home() {
 					Freelance React Native Developer and Designer UX/UI
 				</h2>
 			</div>
-			<CookieConsent
+			{/* <CookieConsent
 				style={{ background: "black", color: "white" }}
 				buttonStyle={{
 					color: "white",
@@ -46,7 +45,7 @@ export default function Home() {
 				overlay
 			>
 				This website uses cookies to enhance the user experience.
-			</CookieConsent>
+			</CookieConsent> */}
 		</div>
 	);
 }

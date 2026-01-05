@@ -2,15 +2,36 @@ import { Mdx } from "@/app/components/mdx";
 import { Navigation } from "@/app/components/nav";
 import { routing, type Locale } from "@/i18n/routing";
 import { me } from "#site/content";
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 type Props = {
 	params: Promise<{ locale: Locale }>;
 };
 
+const BASE_URL = "https://www.avandaele.fr";
+
 export function generateStaticParams(): { locale: Locale }[] {
 	return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "me" });
+	const baseUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+
+	return {
+		title: t("metaTitle"),
+		description: t("metaDescription"),
+		alternates: {
+			canonical: `${baseUrl}/me`,
+			languages: {
+				fr: `${BASE_URL}/me`,
+				en: `${BASE_URL}/en/me`,
+			},
+		},
+	};
 }
 
 export default async function MePage({

@@ -3,6 +3,7 @@ import { projects } from "#site/content";
 import { Card } from "@/app/components/card";
 import { Navigation } from "@/app/components/nav";
 import { routing, type Locale } from "@/i18n/routing";
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Article } from "./article";
 
@@ -12,8 +13,28 @@ type Props = {
 	params: Promise<{ locale: Locale }>;
 };
 
+const BASE_URL = "https://www.avandaele.fr";
+
 export function generateStaticParams(): { locale: Locale }[] {
 	return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "projects" });
+	const baseUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+
+	return {
+		title: t("title"),
+		description: t("description"),
+		alternates: {
+			canonical: `${baseUrl}/projects`,
+			languages: {
+				fr: `${BASE_URL}/projects`,
+				en: `${BASE_URL}/en/projects`,
+			},
+		},
+	};
 }
 
 const sortProjects = (a: Project, b: Project): number =>

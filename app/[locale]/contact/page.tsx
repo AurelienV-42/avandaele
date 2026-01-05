@@ -1,10 +1,16 @@
-"use client";
 import { Card } from "@/app/components/card";
 import { Navigation } from "@/app/components/nav";
 import { Link } from "@/i18n/navigation";
+import { routing, type Locale } from "@/i18n/routing";
 import Malt from "@/public/icons/Malt";
 import { Linkedin, Mail } from "lucide-react";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
+
+type Props = {
+	params: Promise<{ locale: Locale }>;
+};
 
 type Social = {
 	icon: ReactNode;
@@ -12,6 +18,8 @@ type Social = {
 	label: string;
 	handle: string;
 };
+
+const BASE_URL = "https://www.avandaele.fr";
 
 const socials: Social[] = [
 	{
@@ -33,6 +41,28 @@ const socials: Social[] = [
 		handle: "aurelienvpro@gmail.com",
 	},
 ];
+
+export function generateStaticParams(): { locale: Locale }[] {
+	return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "contact" });
+	const baseUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+
+	return {
+		title: t("metaTitle"),
+		description: t("metaDescription"),
+		alternates: {
+			canonical: `${baseUrl}/contact`,
+			languages: {
+				fr: `${BASE_URL}/contact`,
+				en: `${BASE_URL}/en/contact`,
+			},
+		},
+	};
+}
 
 const SocialCard = ({ social }: { social: Social }): React.ReactElement => (
 	<Card>
@@ -59,7 +89,12 @@ const SocialCard = ({ social }: { social: Social }): React.ReactElement => (
 	</Card>
 );
 
-export default function ContactPage(): React.ReactElement {
+export default async function ContactPage({
+	params,
+}: Props): Promise<React.ReactElement> {
+	const { locale } = await params;
+	setRequestLocale(locale);
+
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />

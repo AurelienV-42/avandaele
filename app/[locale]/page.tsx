@@ -4,6 +4,18 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Particles from "../components/particles";
 
+const personJsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: "Aurélien Vandaële",
+	url: "https://www.avandaele.fr",
+	jobTitle: "Freelance CTO & Startup Founder",
+	sameAs: [
+		"https://www.linkedin.com/in/aurelien-vandaele/",
+		"https://www.malt.fr/profile/aurelienvandaele",
+	],
+};
+
 export default function Home(): React.ReactElement {
 	const t = useTranslations();
 
@@ -15,6 +27,10 @@ export default function Home(): React.ReactElement {
 
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+			/>
 			<nav className="my-16 animate-fade-in">
 				<ul className="flex items-center justify-center gap-4">
 					{routes.map((item) => (

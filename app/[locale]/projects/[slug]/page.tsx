@@ -18,6 +18,8 @@ type Props = {
 	}>;
 };
 
+const BASE_URL = "https://www.avandaele.fr";
+
 export function generateStaticParams(): { locale: Locale; slug: string }[] {
 	return routing.locales.flatMap((locale) =>
 		projects
@@ -37,9 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		return {};
 	}
 
+	const baseUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+
 	return {
 		title: project.title,
 		description: project.description,
+		alternates: {
+			canonical: `${baseUrl}/projects/${slug}`,
+			languages: {
+				fr: `${BASE_URL}/projects/${slug}`,
+				en: `${BASE_URL}/en/projects/${slug}`,
+			},
+		},
 		openGraph: {
 			title: project.title,
 			description: project.description,
@@ -75,8 +86,30 @@ export default async function PostPage({
 		notFound();
 	}
 
+	const baseUrl = locale === "fr" ? BASE_URL : `${BASE_URL}/en`;
+
+	const projectJsonLd = {
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: project.title,
+		description: project.description,
+		url: `${baseUrl}/projects/${slug}`,
+		author: {
+			"@type": "Person",
+			name: "Aurélien Vandaële",
+			url: BASE_URL,
+		},
+		...(project.dateStart && { datePublished: project.dateStart }),
+		...(project.dateEnd && { dateModified: project.dateEnd }),
+		...(project.ogImage && { image: project.ogImage }),
+	};
+
 	return (
 		<div className="bg-zinc-50 min-h-screen">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+			/>
 			<Header project={project} />
 
 			<article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">

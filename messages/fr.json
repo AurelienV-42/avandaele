@@ -20,5 +20,13 @@
 		"actuallyWorkingOn": "En cours",
 		"month": "mois",
 		"months": "mois"
+	},
+	"me": {
+		"metaTitle": "À propos",
+		"metaDescription": "Découvrez Aurélien Vandaële, CTO freelance et fondateur de startup."
+	},
+	"contact": {
+		"metaTitle": "Contact",
+		"metaDescription": "Contactez Aurélien Vandaële pour vos projets startup ou tech."
 	}
 }

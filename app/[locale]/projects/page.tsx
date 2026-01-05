@@ -49,7 +49,9 @@ export default async function ProjectsPage({
 		(project) => project.slug === "veil-it",
 	)!;
 	const top2 = localeProjects.find((project) => project.slug === "epsor")!;
-	const top3 = localeProjects.find((project) => project.slug === "epitechTeacher")!;
+	const top3 = localeProjects.find(
+		(project) => project.slug === "epitechTeacher",
+	)!;
 	const sorted = filterProjects(
 		projects,
 		locale,

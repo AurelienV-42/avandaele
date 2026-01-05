@@ -1,9 +1,9 @@
 {
 	"metadata": {
-		"title": "Aurélien Vandaële - Freelance React Native Developer & UX/UI Designer",
+		"title": "Aurélien Vandaële - Freelance CTO and startup founder",
 		"template": "%s | Aurélien Vandaële",
-		"description": "Aurélien Vandaële, freelance specializing in React Native development and UX/UI design. Discover innovative mobile and web solutions.",
-		"ogDescription": "Aurélien Vandaële, freelance specializing in React Native development and UX/UI design. Explore my portfolio of innovative mobile and web solutions.",
+		"description": "Aurélien Vandaële, freelance CTO and startup founder. Discover innovative mobile and web solutions.",
+		"ogDescription": "Aurélien Vandaële, freelance CTO and startup founder. Explore my portfolio of innovative mobile and web solutions.",
 		"siteName": "Aurélien Vandaële's Portfolio"
 	},
 	"nav": {
@@ -12,7 +12,7 @@
 		"contact": "Contact"
 	},
 	"home": {
-		"subtitle": "Freelance React Native Developer and Designer UX/UI"
+		"subtitle": "Freelance CTO and startup founder"
 	},
 	"projects": {
 		"title": "Projects",

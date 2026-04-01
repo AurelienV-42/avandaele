@@ -107,19 +107,22 @@
 			"item4After": "+€30,000"
 		},
 		"chapters": {
-			"title": "13 chapters. Nothing superfluous.",
+			"title": "15 chapters. Nothing superfluous.",
 			"items": [
-				"Augmented Dev Mindset",
 				"Claude Code Setup",
+				"Augmented Dev Mindset",
 				"Claude Code Skills",
 				"Ralph — The Autonomous Loop",
 				"OpenClaw — Your Dev Assistant",
 				"Essential MCPs",
-				"Design from Scratch",
+				"Design — Creating a Design from Scratch",
 				"My Concrete Workflow",
 				"Parallelizing with Claude Code",
 				"Prompts & Templates",
 				"React Native × AI — Practical Cases",
+				"OpenCode vs Claude Code: full comparison",
+				"BMAD Method: structured AI agile vs lightweight workflow",
+				"Ethics & Ecology in the AI era",
 				"Bonus: Deploy your own app",
 				"Resources & Links"
 			]

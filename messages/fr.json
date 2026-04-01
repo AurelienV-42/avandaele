@@ -107,19 +107,22 @@
 			"item4After": "+30 000€"
 		},
 		"chapters": {
-			"title": "13 chapitres. Rien de superflu.",
+			"title": "15 chapitres. Rien de superflu.",
 			"items": [
-				"Mindset du Dev Augmenté",
 				"Setup Claude Code",
+				"Mindset du Dev Augmenté",
 				"Les Skills Claude Code",
-				"Ralph — Le Loop Autonome",
+				"Ralph — La Loop Autonome",
 				"OpenClaw — Ton Assistant Dev",
 				"MCPs Essentiels",
-				"Design from Scratch",
+				"Design — Créer un Design from Scratch",
 				"Mon Workflow Concret",
 				"Paralléliser avec Claude Code",
 				"Prompts & Templates",
 				"React Native × IA — Cas Pratiques",
+				"OpenCode vs Claude Code : comparaison complète",
+				"BMAD Method : agile IA structuré vs workflow léger",
+				"Éthique & Écologie face à l'IA",
 				"Bonus : Déployer sa propre appli",
 				"Ressources & Liens"
 			]

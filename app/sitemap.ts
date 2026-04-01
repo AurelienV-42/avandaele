@@ -4,7 +4,7 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://www.avandaele.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const staticPages = ["/", "/projects/", "/me/", "/contact/"];
+	const staticPages = ["/", "/projects/", "/me/", "/contact/", "/guide-ia/"];
 	const locales = ["fr", "en"] as const;
 
 	const staticEntries = locales.flatMap((locale) =>

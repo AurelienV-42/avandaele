@@ -28,5 +28,143 @@
 	"contact": {
 		"metaTitle": "Contact",
 		"metaDescription": "Contactez Aurélien Vandaële pour vos projets startup ou tech."
+	},
+	"guide": {
+		"metaTitle": "Dev Mobile Augmenté IA — Le Guide Complet",
+		"metaDescription": "Le guide complet pour devenir un développeur React Native 10x grâce à l'IA. Claude Code, Ralph, workflows concrets, skills Indie. 8 ans de freelance condensés.",
+		"nav": "Guide IA",
+		"hero": {
+			"badge": "Guide en promotion",
+			"title": "Dev Mobile\nAugmenté IA",
+			"subtitle": "Le guide complet pour devenir un développeur React Native 10x grâce à l'IA",
+			"cta": "Obtenir le guide — 40€",
+			"ctaSub": "Paiement unique · Accès immédiat · Mis à jour régulièrement",
+			"priceNormal": "80€",
+			"pricePromo": "40€",
+			"discount": "-50%",
+			"timerLabel": "Offre limitée"
+		},
+		"proof": {
+			"stat1Value": "50+",
+			"stat1Label": "projets React Native",
+			"stat2Value": "8 ans",
+			"stat2Label": "de freelance",
+			"stat3Value": "5★",
+			"stat3Label": "Super Malter"
+		},
+		"problem": {
+			"title": "Tu codes bien. Mais tu livres trop lentement.",
+			"body": "2 à 4 semaines pour une app from scratch. 2 à 5 jours pour une feature complexe. Des jours perdus à chercher comment configurer Expo, EAS, ou le bon pattern d'architecture. Pendant ce temps, d'autres devs livrent 10x plus vite. Pas parce qu'ils sont meilleurs. Parce qu'ils ont changé leur workflow."
+		},
+		"solution": {
+			"title": "Ce que tu vas maîtriser",
+			"items": [
+				{
+					"icon": "🧠",
+					"title": "Le mindset Agentic",
+					"desc": "Arrête de vibe coder. Pilote l'IA comme un junior précis, pas comme une slot machine."
+				},
+				{
+					"icon": "⚙️",
+					"title": "Setup Claude Code",
+					"desc": "CLAUDE.md, hooks, permissions, settings. Le contrat qui fait que l'IA travaille comme toi."
+				},
+				{
+					"icon": "🔁",
+					"title": "Ralph — Dev autonome",
+					"desc": "20 min de specs humaines → Ralph tourne toute la nuit → projet fonctionnel le matin."
+				},
+				{
+					"icon": "🎨",
+					"title": "6 Skills Indie",
+					"desc": "Business → Design → Scaffold → Dev → Review → ASO. La chaîne complète de l'idée à l'App Store."
+				},
+				{
+					"icon": "⚡",
+					"title": "Paralléliser 2-3 projets",
+					"desc": "Subagents, Agent Teams, Ralph. Comment gérer plusieurs clients en simultané."
+				},
+				{
+					"icon": "📱",
+					"title": "React Native × IA",
+					"desc": "Expo + EAS, Zustand, TanStack Query, Maestro E2E. Les patterns concrets qui marchent."
+				}
+			]
+		},
+		"results": {
+			"title": "Résultats concrets",
+			"item1Title": "App from scratch",
+			"item1Before": "2–4 semaines",
+			"item1After": "2–3 jours",
+			"item2Title": "Feature complexe",
+			"item2Before": "2–5 jours",
+			"item2After": "2–4 heures",
+			"item3Title": "Refacto legacy",
+			"item3Before": "Des semaines",
+			"item3After": "Quelques jours",
+			"item4Title": "Revenus supplémentaires",
+			"item4Before": "1 projet à la fois",
+			"item4After": "+30 000€"
+		},
+		"chapters": {
+			"title": "13 chapitres. Rien de superflu.",
+			"items": [
+				"Mindset du Dev Augmenté",
+				"Setup Claude Code",
+				"Les Skills Claude Code",
+				"Ralph — Le Loop Autonome",
+				"OpenClaw — Ton Assistant Dev",
+				"MCPs Essentiels",
+				"Design from Scratch",
+				"Mon Workflow Concret",
+				"Paralléliser avec Claude Code",
+				"Prompts & Templates",
+				"React Native × IA — Cas Pratiques",
+				"Bonus : Déployer sa propre appli",
+				"Ressources & Liens"
+			]
+		},
+		"living": {
+			"title": "Guide vivant",
+			"body": "L'IA évolue vite. Ce guide est mis à jour régulièrement avec les dernières pratiques, nouveaux outils et retours terrain. Un achat = un accès permanent à toutes les futures mises à jour."
+		},
+		"testimonials": {
+			"title": "Ce qu'ils en disent",
+			"t1Name": "Thomas R.",
+			"t1Role": "Dev React Native",
+			"t1Text": "Compact avec pour objectif le retour sur investissement. Objectif : pouvoir build rapidement des apps mobiles.",
+			"t2Name": "Marc D.",
+			"t2Role": "Freelance mobile",
+			"t2Text": "En quelques jours, j'ai livré une feature qui m'aurait pris deux semaines avant. Le ROI est immédiat dès le premier projet client."
+		},
+		"author": {
+			"title": "Pourquoi me faire confiance",
+			"body": "8 ans de freelance React Native. 50+ projets livrés. Super Malter 5 étoiles sur Malt. J'ai intégré l'IA dans mon workflow réel, pas en théorie. Ce guide condense tout ce que j'ai appris pour que tu n'aies pas à refaire les mêmes erreurs."
+		},
+		"faq": {
+			"title": "Questions fréquentes",
+			"items": [
+				{
+					"q": "C'est pour quel niveau ?",
+					"a": "Développeur React Native avec des bases solides. Débutant absolu : passe ton chemin. Dev mobile intermédiaire à senior : c'est exactement pour toi."
+				},
+				{
+					"q": "Est-ce que Claude Code est payant ?",
+					"a": "Oui, Claude Code nécessite un abonnement Anthropic. Le guide t'explique comment maximiser chaque token pour que ça soit rentable dès le premier projet client."
+				},
+				{
+					"q": "Le guide est-il mis à jour ?",
+					"a": "Oui. C'est un guide vivant. Tu reçois toutes les futures mises à jour incluses dans ton achat."
+				},
+				{
+					"q": "Quel format ?",
+					"a": "Notion. Accès immédiat après paiement via une invitation dans ton espace Notion."
+				}
+			]
+		},
+		"pricing": {
+			"title": "Accès immédiat",
+			"guarantee": "Paiement unique · Pas d'abonnement · Accès Notion permanent"
+		}
 	}
 }

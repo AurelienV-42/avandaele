@@ -9,7 +9,8 @@
 	"nav": {
 		"me": "Me",
 		"projects": "Projects",
-		"contact": "Contact"
+		"contact": "Contact",
+		"studio": "Naelo Studio"
 	},
 	"home": {
 		"subtitle": "Freelance CTO and startup founder"

@@ -13,6 +13,7 @@ const personJsonLd = {
 	sameAs: [
 		"https://www.linkedin.com/in/aurelien-vandaele/",
 		"https://www.malt.fr/profile/aurelienvandaele",
+		"https://naelostudio.com",
 	],
 };
 
@@ -42,6 +43,13 @@ export default function Home(): React.ReactElement {
 							{item.name}
 						</Link>
 					))}
+					<a
+						href="https://naelostudio.com"
+						rel="me"
+						className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+					>
+						{t("nav.studio")}
+					</a>
 					<LanguageSwitcher />
 				</ul>
 			</nav>
